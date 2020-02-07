@@ -3,10 +3,10 @@ backend:
     repo: aslotte/aslotte.github.io 
     branch: master # Branch to update (master by default)
     site_domain: alexanderslotte.com # so we can get the github login redirected correctly
-  publish_mode: editorial_workflow
-  media_folder: "images/post-images" # Folder where user uploaded files should go
+publish_mode: editorial_workflow
+media_folder: "images/post-images" # Folder where user uploaded files should go
   
-  collections: # A list of collections the CMS should be able to edit
+collections: # A list of collections the CMS should be able to edit
     - name: "blog" # Used in routes, ie.: /admin/collections/:slug/edit
       label: "Blog" # Used in the UI, ie.: "New Post"
       folder: "_posts/" # The path to the folder where the documents are stored
