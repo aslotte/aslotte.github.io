@@ -106,7 +106,7 @@ analytics:
 
 page:
   header:
-    image: /assets/images/header.jpg    
+    image: //assets/images/header.jpg    
 
 # Site Author
 author:
