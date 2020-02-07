@@ -112,7 +112,7 @@ page:
 author:
   name             : "Alexander Slotte"
   avatar           : "assets/images/bio-photo.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Alexander is a Microsoft MVP and loves all things C#/.NET and ML.NET"
+  bio              : "Alexander is a Microsoft MVP and loves all things C#/.NET and ML.NET. Can be seen speaking at conferences across the US and abroad, or enjoying a cold IPA"
   location         : "Arlington, VA"
   email            : "alexander.slotte@gmail.com"
   links:
