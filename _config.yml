@@ -104,6 +104,8 @@ analytics:
     tracking_id          :
     anonymize_ip         : # true, false (default)
 
+header:
+  image: /assets/images/header.jpg    
 
 # Site Author
 author:
@@ -265,9 +267,6 @@ compress_html:
   clippings: all
   ignore:
     envs: development
-
-header:
-  image: /assets/images/header.jpg
 
 # Defaults
 defaults:
