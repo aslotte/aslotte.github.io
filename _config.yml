@@ -266,6 +266,8 @@ compress_html:
   ignore:
     envs: development
 
+header:
+  image: /assets/images/header.jpg
 
 # Defaults
 defaults:
@@ -274,7 +276,7 @@ defaults:
       path: ""
       type: posts
     values:
-      layout: splash
+      layout: single
       author_profile: true
       read_time: true
       comments: # true
