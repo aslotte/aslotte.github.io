@@ -104,15 +104,14 @@ analytics:
     tracking_id          :
     anonymize_ip         : # true, false (default)
 
-page:
-  header:
-    image: //assets/images/header.jpg    
+header:
+  image: "/assets/images/header.jpg"   
 
 # Site Author
 author:
   name             : "Alexander Slotte"
   avatar           : "assets/images/bio-photo.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Alexander is a Microsoft MVP and loves all things C#/.NET and ML.NET. Can be seen speaking at conferences across the US and abroad, or enjoying a cold IPA"
+  bio              : "Alexander is a Microsoft MVP and loves all things C#/.NET and ML.NET. Can be seen speaking at conferences and meetups across the US and abroad"
   location         : "Arlington, VA"
   email            : "alexander.slotte@gmail.com"
   links:
