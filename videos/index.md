@@ -1,5 +1,6 @@
 ---
 title: "Videos"
+author_profile: true
 comments: true
 layout: collection
 permalink: /videos/
