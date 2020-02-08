@@ -109,7 +109,7 @@ analytics:
 # Site Author
 author:
   name             : "Alexander Slotte"
-  avatar           : "assets/images/bio-photo.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "assets/images/bio-photo.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Alexander is a Microsoft MVP and loves all things C#/.NET and ML.NET. He's a frequent conference speaker and enjoys the outdoors. Say hi!"
   location         : "Arlington, VA"
   email            : "alexander.slotte@gmail.com"
