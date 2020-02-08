@@ -1,6 +1,6 @@
 ---
 title: "Videos"
-layout: grid
+layout: single
 author_profile: true 
 ---
 
