@@ -1,3 +1,9 @@
+---
+layout: default
+header:
+  image: /assets/images/header.jpg
+---
+
 {% if page.header.image contains "://" %}
   {% capture img_path %}{{ page.header.image }}{% endcapture %}
 {% else %}
