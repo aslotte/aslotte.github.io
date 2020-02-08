@@ -1,5 +1,8 @@
 # Site navigation links
 main:
+  - title: Home
+    url: /
+
   - title: All Posts
     url: /posts/
   
