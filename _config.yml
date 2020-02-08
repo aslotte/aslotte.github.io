@@ -264,10 +264,6 @@ compress_html:
   ignore:
     envs: development
 
-collections:
-  - videos
-    output: true
-
 # Defaults
 defaults:
   # _posts
