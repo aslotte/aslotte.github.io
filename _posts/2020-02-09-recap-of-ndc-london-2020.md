@@ -2,7 +2,7 @@
 title: Recap of NDC London 2020
 comments: true
 tags:
-  - NDC Speaking
+  - '#ndc #ndclondon #speaking #dotnetcore'
 date: '2020-02-08 18:48 -0500'
 ---
 This year I was fortunate to have been invited to speak at NDC London, hosted between January 28-31st. It was my first NDC conference, and let me tell you what an amazing experience it was. NDC Conferences has over the last couple of years quickly grown from its original location of Oslo, Norway, to also have a presence in London, Porto, Sydney and as of most recently Minnesota and Melbourne. Speakers fly in from all over the world, and among them you'll find community leaders as well as representatives from the larger tech firms such as Microsoft and Amazon. It's a perfect mix. 
@@ -15,4 +15,12 @@ Let me summarize a couple:
 
 **.NET Core** - wow, there were so many good talks on .NET Core. Yes it's been out for a couple of years now, but with v3.x, a lot of companies are seriously looking to migrate their old legacy .NET Framework monoliths. To be frank, the client for which I'm currently helping has just started to take this leap. 
 
-**Machine Learning** is becoming more and more mainstream, and I can see that a lot of talks are moving away from the general introduction to actually looking at applied ML. I may be a bit biased here as I personally gave a workshop on the open-source, cross-platform library ML.NET, but I would say that the interest is there. Developers want to know more about ML and how it fits into their application, but it may sometimes be difficult to know where to start. I'm hoping to change that in 2020
+**Machine Learning** is becoming more and more mainstream, and I can see that a lot of talks are moving away from the general introduction to actually looking at applied ML. I may be a bit biased here as I personally gave a workshop on the open-source, cross-platform library ML.NET, but I would say that the interest is there. Developers want to know more about ML and how it fits into their application, but it may sometimes be difficult to know where to start. I'm hoping to change that in 2020.
+
+**gRPC** - as Microsoft has decided to kill of WCF by not supporting it in .NET Core, gRPC has quickly gained interest, and rightfully so. I had the chance to join Ryan Novak in his **Microservices in .NET** talk, and was really impressed with what I saw in terms of gRPC. It's fast, it's cool, it's fun, and most importantly I can see how useful this new communication standard can become. If you haven't checked out gRPC yet, now is the time.
+
+
+
+Despite all the fantastic sessions, NDC is more than just learning, it's networking. The conference does an excellent job hosting evening events where speakers and attendees get to mingle and connect. At NDC London we took a boat cruise one evening, and spent another one listening to tech related stand-up. So much fun!
+
+So would I recommend people to attend a NDC conference? Absolutely, it's a blast!
