@@ -2,7 +2,7 @@
 title: Recap of NDC London 2020
 comments: true
 tags:
-  - '#ndc #ndclondon #speaking #dotnetcore #mlnet'
+  - ndc ndclondon speaking dotnetcore mlnet
 date: '2020-02-08 18:48 -0500'
 ---
 This year I was fortunate to have been invited to speak at NDC London, hosted January 28-31st. I've had speaking at a NDC conference on my bucket list for quite some time, and let me tell you what an amazing experience it was. NDC Conferences has over the last couple of years quickly grown from its original location of Oslo, Norway, to also have a presence in London, Porto, Sydney, Copenhagen and as of most recently Minnesota and Melbourne. Speakers fly in from all over the world, and among them you'll find community leaders as well as representatives from the larger tech firms such as Microsoft and Amazon. It's a perfect mix. 
