@@ -7,19 +7,9 @@ date: '2020-02-10 17:20 -0500'
 ---
 Wow, I can't believe it's already been a week. Receiving my Microsoft MVP award in Developer Technologies on February 1st 2020 was literally a dream come true. I was sitting in my hotel room in London, after just have spoken at NDC London 2020 when I saw the e-mail. It's such a surreal feeling, but one filled with so much joy and happiness.
 
-
-
 **So how does one become an MVP?**
 
 On Microsoft's website, it reads as follows:
-
-> <!--StartFragment-->
->
-> The Microsoft MVP Award gives us the unique opportunity to celebrate, honor and say thank you to top-notch technology experts who make outstanding contributions to their communities. These technology experts have an unstoppable urge to get their hands on new, exciting technologies and love to share their knowledge.
->
-> <!--EndFragment-->
->
->
 
 Like so many other Microsoft MVPs, my goal was never to obtain the MVP award for the sake of the award itself. As much as I appreciate the award and value it, I see it as a recognition that my contributions to the developer community are seen as valuable, and I'm very humbled by that fact. There are many roads that may lead to an MVP award, but they all start with your passion. What are you passionate about? What motivates you to expand outside your comfort zone, so that you can mentor and help others? For me that was the quest to make machine learning more accessible for .NET developers. 
 
@@ -31,6 +21,4 @@ Know that there are many ways you can contribute, and you don't need to do them 
 
 
 
-
-
-Why is it so awesome being an MPV?
+**Why is it so awesome being an MPV?**
