@@ -19,7 +19,9 @@ There are many roads that may lead to an MVP award, but they all start with your
 
 For me personally, that was the quest to make machine learning more accessible for developers. I challenge you to find yours. 
 
-**How do I get started?**
+
+
+**How do you get started?**
 
 If I look back at my own career, I contributed very little to the developer community just two years ago. As many others, I had 10s if not 100s of open-source dependencies in my application, and I happily consumed blog-posts with neat solutions to the problems I was facing. It was not that I didn't want to contribute, I just didn't know where to start. For me that all changed when I started working for my current employer Excella (a special shout-out to [Sean Killeen](https://twitter.com/sjkilleen)). Excella is a fantastic place to work, and consists of so many smart people, who either run successful open-source repos or are published authors. Starting to work in that kind of environment really inspired me. 
 
@@ -28,6 +30,8 @@ I'm not saying you need to change job to get started, but what I would suggest d
 There are many ways to contribute, and you don't need to do them all (in fact I would advise against it). If you have a talent for writing, I would encourage you to start a blog. If you like producing videos, consider streaming on Twitch or YouTube while you work through some code that interest you. If you are like me and really enjoys teaching people face-to-face, consider submitting abstract to Meetups and conferences. 
 
 Another great way to get engaged in the community is to help organize a Meetup. As a Meetup organizer myself, I will say that help is always needed. If you are attending a Meetup today, consider reaching out to the organizers and see if there's anything you can do. I promise you that you'll meet so many new friends. 
+
+
 
 **Why is it so awesome being an MPV?**
 
