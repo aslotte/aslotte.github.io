@@ -7,8 +7,6 @@ date: '2020-02-10 17:20 -0500'
 ---
 Wow, I can't believe it has already been a week. Receiving my Microsoft MVP award on February 1st 2020 was literally a dream come true. I was sitting in my hotel room in London, after just have spoken at NDC London 2020 when I saw the e-mail. It's such a surreal feeling, but one filled with so much joy and happiness.
 
-
-
 ## So how does one become an MVP?
 
 [According to Microsoft](https://mvp.microsoft.com/en-US/pages/what-it-takes-to-be-an-mvp) 
@@ -21,8 +19,6 @@ There are many roads that may lead to an MVP award, but they all start with your
 
 For me personally, that was the quest to make machine learning more accessible for developers. I challenge you to find yours. 
 
-
-
 ## How do you get started?
 
 If I look back at my own career, I contributed very little to the developer community just two years ago. As many others, I had 10s if not 100s of open-source dependencies in my application, and I happily consumed blog-posts with neat solutions to the problems I was facing. It was not that I didn't want to contribute, I just didn't know where to start. For me that all changed when I started working for my current employer Excella (a special shout-out to [Sean Killeen](https://twitter.com/sjkilleen)). Excella is a fantastic place to work, and consists of so many smart people, who either run successful open-source repos or are published authors. Starting to work in that kind of environment really inspired me. 
@@ -33,9 +29,7 @@ There are many ways to contribute, and you don't need to do them all (in fact I 
 
 Another great way to get engaged in the community is to help organize a Meetup. As a Meetup organizer myself, I will say that help is always needed. If you are attending a Meetup today, consider reaching out to the organizers and see if there's anything you can do. I promise you that you'll meet so many new friends. 
 
-
-
-## Why is it so awesome being an MPV?
+## Why is it so awesome becoming an MPV?
 
 So what are some benefits of becoming an MVP? Different people will surely highlight different things, but to me it's the access to a fantastic group of people. I love being able to easily connect to other MVPs across the US and the world and to have a chance to meet them face-to-face at events such as the MVP Summit.
 
