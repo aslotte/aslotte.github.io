@@ -9,9 +9,13 @@ Wow, I can't believe it has already been a week. Receiving my Microsoft MVP awar
 
 **So how does one become an MVP?**
 
-On Microsoft's website, it reads as follows:
+According to Microsoft (source: <https://mvp.microsoft.com/en-US/pages/what-it-takes-to-be-an-mvp>)
 
-Like so many other Microsoft MVPs, my goal was never to obtain the MVP award for the sake of the award itself. As much as I appreciate the award and value it, I see it as a recognition that my contributions to the developer community are seen as valuable, and I'm very humbled by that fact. There are many roads that may lead to an MVP award, but they all start with your passion. What are you passionate about? What motivates you to expand outside your comfort zone, so that you can mentor and help others? For me that was the quest to make machine learning more accessible for .NET developers. 
+> The Microsoft MVP Award gives us the unique opportunity to celebrate, honor and say thank you to top-notch technology experts who make outstanding contributions to their communities. These technology experts have an unstoppable urge to get their hands on new, exciting technologies and love to share their knowledge. While there is no single way to become an MVP, we have some great examples that showcase our MVPs and the passion, community spirit and leadership they have exhibited to earn the MVP award
+
+Like so many other Microsoft MVPs, my goal was never to obtain the MVP award for the sake of the award itself. As much as I appreciate the award and value it, I see it as a recognition that my contributions to the developer community are seen as valuable, and I'm very humbled by that fact. 
+
+There are many roads that may lead to an MVP award, but they all start with your passion. What are you passionate about? What motivates you to expand outside your comfort zone, so that you can mentor and help others? For me that was the quest to make machine learning more accessible for .NET developers. 
 
 **How do I get started?**
 
