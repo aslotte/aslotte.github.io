@@ -27,7 +27,7 @@ If I look back at my own career, I contributed very little to the developer comm
 
 I'm not saying you need to change job to get started, but what I would suggest doing is to seek out a mentor active in the community. This individual can be your partner, and help you navigate how and where to best put your passionate to work. With that said, I'm more than happy to support **you** today if you want to get started. Just reach out and say hi!
 
-There are many ways to contribute, and you don't need to do them all (in fact I would advise against it). If you have a talent for writing, I would encourage you to start a blog. If you like producing videos, consider streaming on Twitch or YouTube while you work through some code that interest you. If you are like me and really enjoys teaching people face-to-face, consider submitting abstract to Meetups and conferences. 
+There are many ways to contribute, and you don't need to do them all (in fact I would advise against it). If you have a talent for writing, I would encourage you to start a blog. If you like producing videos, consider streaming on Twitch or YouTube while you work through some code that interest you. If you are like me and really enjoys teaching people face-to-face, consider submitting abstracts to Meetups and conferences. 
 
 Another great way to get engaged in the community is to help organize a Meetup. As a Meetup organizer myself, I will say that help is always needed. If you are attending a Meetup today, consider reaching out to the organizers and see if there's anything you can do. I promise you that you'll meet so many new friends. 
 
