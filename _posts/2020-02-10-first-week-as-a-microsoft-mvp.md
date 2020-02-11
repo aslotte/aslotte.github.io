@@ -5,7 +5,7 @@ tags:
   - '#mvp #speaking'
 date: '2020-02-10 17:20 -0500'
 ---
-Wow, I can't believe it's already been a week. Receiving my Microsoft MVP award in Developer Technologies on February 1st 2020 was literally a dream come true. I was sitting in my hotel room in London, after just have spoken at NDC London 2020 when I saw the e-mail. It's such a surreal feeling, but one filled with so much joy and happiness.
+Wow, I can't believe it has already been a week. Receiving my Microsoft MVP award in Developer Technologies on February 1st 2020 was literally a dream come true. I was sitting in my hotel room in London, after just have spoken at NDC London 2020 when I saw the e-mail. It's such a surreal feeling, but one filled with so much joy and happiness.
 
 **So how does one become an MVP?**
 
@@ -26,8 +26,6 @@ Another great way to get engaged in the community is to help organize a Meetup. 
 So what are some benefits of being an MVP? Different people will surely highlight different things, but to me it's the access to a fantastic group of people. I love being able to easily connect to other MVPs across the US and the world and to have a chance to meet them face-to-face at events such as the MVP Summit.
 
 They truly are technical thought leaders in their domain, and being exposed to their thoughts and opinions is a brilliant incubator for new ideas. 
-
-
 
 \- MVP Summit
 
