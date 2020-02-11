@@ -13,7 +13,7 @@ Wow, I can't believe it has already been a week. Receiving my Microsoft MVP awar
 
 > The Microsoft MVP Award gives us the unique opportunity to celebrate, honor and say thank you to top-notch technology experts who make outstanding contributions to their communities. These technology experts have an unstoppable urge to get their hands on new, exciting technologies and love to share their knowledge. While there is no single way to become an MVP, we have some great examples that showcase our MVPs and the passion, community spirit and leadership they have exhibited to earn the MVP award
 
-Like so many other MVPs, my goal was never to obtain the MVP award for the sake of the award itself. As much as I appreciate and value the award, I see it more as a recognition of my contributions to a development community that took care of me early in my career, and to which I now want to give back to. 
+Like so many other MVPs, my goal was never to obtain the MVP award for the sake of the award itself. As much as I appreciate and value the award, I see it more as a recognition of my contributions to a development community that took care of me early in my career, and to which I now want to give back. 
 
 There are many roads that may lead to an MVP award, but they all start with your passion. What are you passionate about? What motivates you to expand outside your comfort zone, so that you can mentor and help others? For me that was the quest to make machine learning more accessible for .NET developers. I challenge you to find yours. 
 
