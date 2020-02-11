@@ -38,3 +38,7 @@ They truly are technical thought leaders in their domain, and being exposed to t
 As an MVP you are also invited to the yearly MVP Summit in Redmond. I'm very fortunate to be able to attend this year (held in March), and I'm excited to see with whom I'll connect with and what I'll experience. 
 
 Oh, I almost forgot. As an MVP you also get a really cool award kit that arrives in the mail about 2 weeks after the award. Mine arrived today. I sort of knew what it would contain after watching videos on YouTube, but it was regardless an exciting moment unpacking it. Because this award kit was mine.
+
+
+
+![](/images/post-images/mvp award.jpg)
