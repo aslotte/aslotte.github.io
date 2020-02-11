@@ -9,6 +9,8 @@ Wow, I can't believe it has already been a week. Receiving my Microsoft MVP awar
 
 ## So how does one become an MVP?
 
+![](/images/post-images/MVP_Logo_Horizontal_Preferred_Cyan300_RGB_300ppi.png)
+
 [According to Microsoft](https://mvp.microsoft.com/en-US/pages/what-it-takes-to-be-an-mvp) 
 
 > The Microsoft MVP Award gives us the unique opportunity to celebrate, honor and say thank you to top-notch technology experts who make outstanding contributions to their communities. These technology experts have an unstoppable urge to get their hands on new, exciting technologies and love to share their knowledge. While there is no single way to become an MVP, we have some great examples that showcase our MVPs and the passion, community spirit and leadership they have exhibited to earn the MVP award
@@ -38,7 +40,5 @@ They truly are technical thought leaders in their domain, and being exposed to t
 As an MVP you are also invited to the yearly MVP Summit in Redmond. I'm very fortunate to be able to attend this year (held in March), and I'm excited to see with whom I'll connect with and what I'll experience. 
 
 Oh, I almost forgot. As an MVP you also get a really cool award kit that arrives in the mail about 2 weeks after the award. Mine arrived today. I sort of knew what it would contain after watching videos on YouTube, but it was regardless an exciting moment unpacking it. Because this award kit was mine.
-
-
 
 ![](/images/post-images/mvp award.jpg)
