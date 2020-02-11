@@ -1,8 +1,8 @@
 ---
-title: First week as a Microsoft MVP
+title: My First Week as a Microsoft MVP
 comments: true
 tags:
-  - '#mvp #speaking'
+  - '#mvp #speaking #dotnet'
 date: '2020-02-10 17:20 -0500'
 ---
 Wow, I can't believe it has already been a week. Receiving my Microsoft MVP award in Developer Technologies on February 1st 2020 was literally a dream come true. I was sitting in my hotel room in London, after just have spoken at NDC London 2020 when I saw the e-mail. It's such a surreal feeling, but one filled with so much joy and happiness.
@@ -33,6 +33,6 @@ So what are some benefits of becoming an MVP? Different people will surely highl
 
 They truly are technical thought leaders in their domain, and being exposed to their thoughts and opinions is a brilliant incubator for new ideas. 
 
-As an MVP you are also invited to the yearly MVP Summit in Redmond. I'm very fortunate to be able to go attend this year (held in March), and I'm excited to see whom I'll connect with and what I'll experience. 
+As an MVP you are also invited to the yearly MVP Summit in Redmond. I'm very fortunate to be able to attend this year (held in March), and I'm excited to see with whom I'll connect with and what I'll experience. 
 
 Oh, I almost forgot. As an MVP you also get a really cool award kit that arrives in the mail about 2 weeks after the award. Mine arrived today. I sort of knew what it would contain after watching videos on YouTube, but it was regardless an exciting moment unpacking it. Because this award kit was mine.
