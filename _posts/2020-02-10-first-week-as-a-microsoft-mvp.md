@@ -23,14 +23,10 @@ Another great way to get engaged in the community is to help organize a Meetup. 
 
 **Why is it so awesome being an MPV?**
 
-So what are some benefits of being an MVP? Different people will surely highlight different things, but to me it's the access to a fantastic group of people. I love being able to easily connect to other MVPs across the US and the world and to have a chance to meet them face-to-face at events such as the MVP Summit.
+So what are some benefits of becoming an MVP? Different people will surely highlight different things, but to me it's the access to a fantastic group of people. I love being able to easily connect to other MVPs across the US and the world and to have a chance to meet them face-to-face at events such as the MVP Summit.
 
 They truly are technical thought leaders in their domain, and being exposed to their thoughts and opinions is a brilliant incubator for new ideas. 
 
-\- MVP Summit
+As an MVP you are also invited to the yearly MVP Summit in Redmond. I'm very fortunate to be able to go attend this year (held in March), and I'm excited to see whom I'll connect with and what I'll experience. 
 
-\- Access to a fantastic group of people
-
-\- Licenses to amazing developer tools
-
-\- Training
+Oh, I almost forgot. As an MVP you also get a really cool award kit that arrives in the mail about 2 weeks after the award. Mine arrived today. I sort of knew what it would contain after watching videos on YouTube, but it was regardless an exciting moment unpacking it. Because this award kit was mine.
