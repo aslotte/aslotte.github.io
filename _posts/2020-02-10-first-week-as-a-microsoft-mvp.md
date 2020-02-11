@@ -15,7 +15,9 @@ Wow, I can't believe it has already been a week. Receiving my Microsoft MVP awar
 
 Like so many other MVPs, my goal was never to obtain the MVP award for the sake of the award itself. As much as I appreciate and value the award, I see it more as a recognition of my contributions to a development community that took care of me early in my career, and to which I now want to give back. 
 
-There are many roads that may lead to an MVP award, but they all start with your passion. What are you passionate about? What motivates you to expand outside your comfort zone, so that you can mentor and help others? For me that was the quest to make machine learning more accessible for .NET developers. I challenge you to find yours. 
+There are many roads that may lead to an MVP award, but they all start with your passion. What are you passionate about? What motivates you to reach outside your comfort zone, so that you can mentor and help others? 
+
+For me personally, that was the quest to make machine learning more accessible for developers. I challenge you to find yours. 
 
 **How do I get started?**
 
