@@ -31,7 +31,7 @@ There are many ways to contribute, and you don't need to do them all (in fact I 
 
 Another great way to get engaged in the community is to help organize a Meetup. As a Meetup organizer myself, I will say that help is always needed. If you are attending a Meetup today, consider reaching out to the organizers and see if there's anything you can do. I promise you that you'll meet so many new friends. 
 
-## Why is it so awesome becoming an MPV?
+## Why is it so awesome becoming an MVP?
 
 So what are some benefits of becoming an MVP? Different people will surely highlight different things, but to me it's the access to a fantastic group of people. I love being able to easily connect to other MVPs across the US and the world and to have a chance to meet them face-to-face at events such as the MVP Summit.
 
