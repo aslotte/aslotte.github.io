@@ -17,7 +17,7 @@ The first thing to keep in mind, is that it's completely possible to do this con
 * `Microsoft.Extensions.Abstractions`
 * `Microsoft.Extensions.Primitives`
 
-By installing these packages, you will be able to build a configuration using the `ConfigurationBuilder `in your `Global.asax` or `Startup.cs` file. This `IConfiguration `can be registered in your dependency injection framework. At the end, the code will look something like this, which will register your appsetting.json file.
+By installing these packages, you will be able to build a configuration using the `ConfigurationBuilder`in your `Global.asax` or `Startup.cs` file. This `IConfiguration`can be registered in your dependency injection framework. At the end, the code will look something like this, which will register your `appsetting.json` file.
 
 ```
 IConfiguration configuration = new ConfigurationBuilder()
@@ -25,29 +25,53 @@ IConfiguration configuration = new ConfigurationBuilder()
     .Build();
 ```
 
-
-
 However, to get there safely, I propose a 4-step approach:
 
-1. Create a custom configuration provider and inject `IConfiguration`
-2. Remove any static reference to `System.Configuration.ConfigurationManager `
+1. Create a custom configuration provider 
+2. Remove any static reference to `System.Configuration.ConfigurationManager`
 3. Convert `web.config`/`app.config` to `appsettings.json`
 4. Leverage strongly typed configuration classes
 
-
-
 ### 1. Create a custom configuration provider
 
-We can continue to read our configuration values from a web- or app.config despite transitioning to the package `Microsoft.Extensions.Configuration`. [Ben Foster](https://benfoster.io/blog/net-core-configuration-legacy-projects) has written an excellent blog post on how to do this, in which he creates a custom configuration provider that reads the appsettings and connection string values from our web.config. 
+We can continue to read our configuration values from a web- or app.config despite transitioning to the package `Microsoft.Extensions.Configuration`. [Ben Foster](https://benfoster.io/blog/net-core-configuration-legacy-projects) has written an excellent blog post on how to do this, in which he creates a custom configuration provider that reads the appsettings and connection string values from our web.config. Before doing anything else, I would recommend you:
 
+1. Installing the following NuGet packages:
 
+   * `Microsoft.Extensions.Configuration`
+   * `Microsoft.Extensions.Abstractions`
+   * `Microsoft.Extensions.Primitives`
+2. Creating a custom configuration provider according to [Ben Foster's](https://benfoster.io/blog/net-core-configuration-legacy-projects) post
+3. Adding the following to your Global.asax or Startup.cs file
 
-### 1. Remove any static reference to System.Configuration.ConfigurationManager
+   ```
+   IConfiguration configuration = new ConfigurationBuilder()
+       .Add(new LegacyConfigurationProvider())
+       .Build();
+   ```
 
-Many legacy .NET Framework applications either use the static System.Configuration.ConfigurationManager to fetch configuration settings, or have their own abstraction of the ConfigurationManager, such that it's not directly exposed across the application. Before we even consider migrating our configuration we would need to remove any of these static references. If you 
+### 2. Remove any static reference to System.Configuration.ConfigurationManager
 
+I've come across many legacy .NET Framework applications that either directly use the static `System.Configuration.ConfigurationManager `to fetch their configuration values, or have their own abstraction so that it's not directly exposed across the application. Regardless of how your application does it, we will need to replace the usage of `System.Configuration.ConfigurationManager` across the application with `IConfiguration` registered in step 1. I would recommend doing step 1 and 2 together in the same PR, as it's a great way to set a solid foundation for your migration effort. This change would then be able to safely go to production once automated and manual exploratory tests succeed. 
 
+### 3.  Convert `web.config` and `app.config` to `appsettings.json`
 
-#### 1.1 Create a custom ConfigurationBuilder
+Alright, so we have our piping setup with our application now relying on the new `IConfiguration` instead of the old `System.Configuration.ConfigurationManager.` The next step is to start migrating configuration values to an `appsettings.json` file. 
 
-Install
+There are a couple of things to keep in mind here:
+
+1. Organize your configuration values in sections
+
+```
+{
+  "FeatureToggles: {
+    "Feature1Enabled": "true:,
+    "Featuer2Enabled": "false:
+  },
+  "ConnectionStrings: {
+    "Database": "ConnectionStringValue"
+  }
+}
+```
+
+ 2. Configuration values are now retrieved by `Section:Key`
