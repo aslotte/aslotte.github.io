@@ -2,7 +2,7 @@
 title: Migrating your .NET Framework configuration to .NET Core
 comments: true
 tags:
-  - dotnetcore
+  - '#dotnetcore #configuration'
 date: '2020-02-08 08:44 -0500'
 ---
 ## The challenge
@@ -79,9 +79,9 @@ using System;
 
 public class FeatureToggles 
 {
-  public bool Feature1Enabled { get; set; }
+    public bool Feature1Enabled { get; set; }
   
-  public bool Feature2Enabled { get; set; }
+    public bool Feature2Enabled { get; set; }
 }
 ```
 
