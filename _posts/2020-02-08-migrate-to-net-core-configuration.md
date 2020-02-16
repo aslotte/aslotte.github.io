@@ -1,5 +1,5 @@
 ---
-title: Migrate to .NET Core configuration
+title: Migrating your .NET Framework configuration to .NET Core
 comments: true
 tags:
   - dotnetcore
