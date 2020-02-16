@@ -52,7 +52,7 @@ We can continue to read our configuration values from a web- or app.config despi
 
 ### 2. Remove any static reference to System.Configuration.ConfigurationManager
 
-I've come across many legacy .NET Framework applications that either directly use the static `System.Configuration.ConfigurationManager `to fetch their configuration values, or have their own abstraction so that it's not directly exposed across the application. Regardless of how your application does it, we will need to replace the usage of `System.Configuration.ConfigurationManager` across the application with `IConfiguration` registered in step 1. I would recommend doing step 1 and 2 together in the same PR, as it's a great way to set a solid foundation for your migration effort. This change would then be able to safely go to production once automated and manual exploratory tests succeed. 
+I've come across many legacy .NET Framework applications that either directly use the static `System.Configuration.ConfigurationManager`to fetch their configuration values, or have their own abstraction so that it's not directly exposed across the application. Regardless of how your application does it, we will need to replace the usage of `System.Configuration.ConfigurationManager` across the application with `IConfiguration` registered in step 1. I would recommend doing step 1 and 2 together in the same PR, as it's a great way to set a solid foundation for your migration effort. This change would then be able to safely go to production once automated and manual exploratory tests succeed. 
 
 ### 3.  Convert `web.config` and `app.config` to `appsettings.json`
 
@@ -60,7 +60,7 @@ Alright, so we have our piping setup with our application now relying on the new
 
 There are a couple of things to keep in mind here:
 
-1. Organize your configuration values in sections
+#### 3.1 Organize your configuration values in sections
 
 ```
 {
@@ -74,4 +74,14 @@ There are a couple of things to keep in mind here:
 }
 ```
 
- 2. Configuration values are now retrieved by `Section:Key`
+#### 3.2 Configuration values are now retrieved by `Section:Key`
+
+As you are using sections, you'll have to make sure to update any reference to a configuration value so that it is prefixed with the section name. This can be easy to forget, especially if you're for example using a tool such as Octopus to transform your configuration before deployment.
+
+
+
+### 4. Leverage strongly typed configuration classes
+
+
+
+###
