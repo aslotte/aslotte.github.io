@@ -20,22 +20,24 @@ To safely perform this migration, I propose a 4-step approach:
 3. Convert `web.config`/`app.config` to `appsettings.json`
 4. Leverage strongly typed configuration classes
 
-### 1. Install `Microsoft.Extensions.Configuration` and create a custom configuration provider 
+### 1. Install `Microsoft.Extensions.Configuration` and create a custom configuration provider
 
-We can continue to read our configuration values from a web- or app.config while migrating to using `Microsoft.Extensions.Configuration`. [Ben Foster](https://benfoster.io/blog/net-core-configuration-legacy-projects) has written an excellent blog post on how to do this, in which he creates a custom configuration provider that reads the appsettings and connection string values from our web.config. Before doing anything else, I would recommend you:
+We can continue to read configuration values from the `web.config` while migrating to `Microsoft.Extensions.Configuration`. [Ben Foster](https://benfoster.io/blog/net-core-configuration-legacy-projects) has written an excellent blog post on how to do this, in which he creates a custom configuration provider that reads and parses values from the `web.config`. Before doing anything else, I would recommend you:
 
 1. Installing the following NuGet packages:
 
    * `Microsoft.Extensions.Configuration`
    * `Microsoft.Extensions.Abstractions`
    * `Microsoft.Extensions.Primitives`
-2. Creating a custom configuration provider according to [Ben Foster's](https://benfoster.io/blog/net-core-configuration-legacy-projects) post
+2. Creating a custom configuration provider by following the steps in [Ben Foster's](https://benfoster.io/blog/net-core-configuration-legacy-projects) post
 3. Adding the following to your Global.asax or Startup.cs file
 
    ```
    IConfiguration configuration = new ConfigurationBuilder()
        .Add(new LegacyConfigurationProvider())
        .Build();
+       
+     //Register IConfiguration in your DI framework
    ```
 
 ### 2. Remove any static reference to System.Configuration.ConfigurationManager
