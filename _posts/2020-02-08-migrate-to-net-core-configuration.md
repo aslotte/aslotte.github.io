@@ -11,6 +11,10 @@ Migrating an enterprise application from .NET Framework to .NET Core can both be
 
 With emphasis on safely. Let's have a look. 
 
+
+
+![](/images/post-images/rima-kruciene-gpKe3hmIawg-unsplash.jpg)
+
 ## A proposed solution
 
 It's possible to migrate your configuration while still targeting .NET Framework. To do so, you'll need install and use the `Microsoft.Extensions.Configuration` package, and refactor your application to not depend on `System.Configuration.ConfigurationManager.` This can sound very easy, but it can in fact be very complex depending on the size of the application.
