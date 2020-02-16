@@ -11,30 +11,18 @@ Migrating a large enterprise application written in .NET Framework to .NET Core 
 
 ## Proposed solution
 
-The first thing to keep in mind, is that it's completely possible to do this conversion before you fully migrate your projects to .NET Core. The following NuGet packages needs to get installed:
+It's possible to migrate your configuration while still targeting .NET Framework. To do so, you'll need install and use the `Microsoft.Extensions.Configuration` package, and refactor your application to not depend on `System.Configuration.ConfigurationManager.` This can sound very easy, but it can in fact be very complex depending on the size of the application.
 
-* `Microsoft.Extensions.Configuration`
-* `Microsoft.Extensions.Abstractions`
-* `Microsoft.Extensions.Primitives`
+To safely perform this migration, I propose a 4-step approach:
 
-By installing these packages, you will be able to build a configuration using the `ConfigurationBuilder`in your `Global.asax` or `Startup.cs` file. This `IConfiguration`can be registered in your dependency injection framework. At the end, the code will look something like this, which will register your `appsetting.json` file.
-
-```
-IConfiguration configuration = new ConfigurationBuilder()
-    .AddJsonFile("appsettings.json.config", optional: true)
-    .Build();
-```
-
-However, to get there safely, I propose a 4-step approach:
-
-1. Create a custom configuration provider 
+1. Install `Microsoft.Extensions.Configuration` and create a custom configuration provider 
 2. Remove any static reference to `System.Configuration.ConfigurationManager`
 3. Convert `web.config`/`app.config` to `appsettings.json`
 4. Leverage strongly typed configuration classes
 
-### 1. Create a custom configuration provider
+### 1. Install `Microsoft.Extensions.Configuration` and create a custom configuration provider 
 
-We can continue to read our configuration values from a web- or app.config despite transitioning to the package `Microsoft.Extensions.Configuration`. [Ben Foster](https://benfoster.io/blog/net-core-configuration-legacy-projects) has written an excellent blog post on how to do this, in which he creates a custom configuration provider that reads the appsettings and connection string values from our web.config. Before doing anything else, I would recommend you:
+We can continue to read our configuration values from a web- or app.config while migrating to using `Microsoft.Extensions.Configuration`. [Ben Foster](https://benfoster.io/blog/net-core-configuration-legacy-projects) has written an excellent blog post on how to do this, in which he creates a custom configuration provider that reads the appsettings and connection string values from our web.config. Before doing anything else, I would recommend you:
 
 1. Installing the following NuGet packages:
 
@@ -103,8 +91,6 @@ IConfiguration configuration = new ConfigurationBuilder()
 var featureToggles = configuration.GetSection(nameof(FeatureToggles));
 //register the instance in your DI framework here
 ```
-
-
 
 ### Summary
 
