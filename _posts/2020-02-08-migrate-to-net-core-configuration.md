@@ -78,10 +78,34 @@ There are a couple of things to keep in mind here:
 
 As you are using sections, you'll have to make sure to update any reference to a configuration value so that it is prefixed with the section name. This can be easy to forget, especially if you're for example using a tool such as Octopus to transform your configuration before deployment.
 
-
-
 ### 4. Leverage strongly typed configuration classes
 
+The final step in the transformation is to refactor our application to rely on strongly typed configuration classes. For each section of the `appsettings.json` file, create a corresponding settings class. Such a settings class could for example look like this: 
+
+```
+using System; 
+
+public class FeatureToggles 
+{
+  public bool Feature1Enabled { get; set; }
+  
+  public bool Feature2Enabled { get; set; }
+}
+```
+
+Then in addition to registering the `IConfiguration` instance in our dependency injection framework, we can then bind and register each specific configuration classes. Once that's complete we can then replace the injection of `IConfiguration` in our classes with the specific settings class.
+
+```
+IConfiguration configuration = new ConfigurationBuilder()
+    .AddJsonFile("appsettings.json.config", optional: true)
+    .Build();
+    
+var featureToggles = configuration.GetSection(nameof(FeatureToggles));
+//register the instance in your DI framework here
+```
 
 
-###
+
+### Summary
+
+I hope this post has given you some ideas on how you can safely get started migrating your configuration in your .NET Framework app to .NET Core. As always feel free to reach out on Twitter or LinkedIn, should you have any questions. Happy coding!
