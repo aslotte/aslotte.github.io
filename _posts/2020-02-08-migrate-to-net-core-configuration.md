@@ -5,11 +5,13 @@ tags:
   - dotnetcore
 date: '2020-02-08 08:44 -0500'
 ---
-## Problem
+## The challenge
 
-Migrating an enterprise application written in .NET Framework to .NET Core can both be a lot of work as well as risky. But the benefits once complete are really worth the effort. One of the many things that have been improved is configuration management. Configuration management in .NET Core is awesome. Not only is it primarily JSON based with cleanly divided sections, but you can also easily have your application read from multiple sources such as environmental variables, Azure Key Vault and so forth. The hot reload options and the ability to out of the box bind sections to strongly typed classes makes the migration worthwhile. But how do one go about safely migrating a legacy app's XML based configuration to .NET Core's JSON based style? With emphasis on safely. Let's have a look. 
+Migrating an enterprise application from .NET Framework to .NET Core can both be a lot of work and risky. But the benefits once complete are well worth the effort. One of the many things that have been improved is configuration management. Configuration management in .NET Core is awesome. Not only is it primarily JSON based with cleanly divided sections, but it's also possible to have your application read from multiple sources such as environmental variables, Azure Key Vault and so forth. The hot reload options and the ability to out of the box bind sections to strongly typed classes makes the migration worthwhile. But how do one go about safely migrating a legacy app's XML based configuration to .NET Core's JSON based style? 
 
-## Proposed solution
+With emphasis on safely. Let's have a look. 
+
+## A proposed solution
 
 It's possible to migrate your configuration while still targeting .NET Framework. To do so, you'll need install and use the `Microsoft.Extensions.Configuration` package, and refactor your application to not depend on `System.Configuration.ConfigurationManager.` This can sound very easy, but it can in fact be very complex depending on the size of the application.
 
