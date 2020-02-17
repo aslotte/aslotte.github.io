@@ -1,5 +1,5 @@
 ---
 layout: posts
 title: All Posts
-author_profile: false
+author_profile: true
 ---
