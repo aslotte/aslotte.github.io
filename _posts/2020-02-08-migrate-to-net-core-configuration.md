@@ -54,7 +54,7 @@ Alright, so we have the piping set up, and our application now depends on `IConf
 
 There are a couple of things to keep in mind while doing this:
 
-#### 3.1 Organize your configuration values in sections
+#### 3.1 Organize our configuration values into sections
 
 Take full advantage of sections.
 
