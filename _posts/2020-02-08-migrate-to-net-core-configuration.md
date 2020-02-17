@@ -50,7 +50,7 @@ Many legacy .NET Framework apps either directly use the static `System.Configura
 
 ### 3.  Convert `web.config` and `app.config` to `appsettings.json`
 
-Alright, so we have the piping set up, and our application now depends on `IConfiguration` instead of the `System.Configuration.ConfigurationManager.` The next step is to convert our `web.config` to `appsettings.json`
+Alright, so we have the piping set up, and our application now depends on `IConfiguration` instead of on the `System.Configuration.ConfigurationManager.` The next step is to convert our `web.config` to `appsettings.json`
 
 There are a couple of things to keep in mind while doing so:
 
