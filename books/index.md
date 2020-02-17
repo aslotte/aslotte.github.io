@@ -9,5 +9,3 @@ comments: false
 Reading is a passion of mine. There are so many great books out there so I thuoght I would hightlight a couple that has shaped my career.
 
 ## Books 
-
-{% include _books.html %}
