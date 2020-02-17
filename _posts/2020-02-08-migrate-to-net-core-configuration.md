@@ -24,6 +24,8 @@ To safely perform this migration, I propose a 4-step approach:
 3. Convert `web.config` and `app.config` to `appsettings.json`
 4. Leverage strongly typed configuration classes
 
+Let's have a look at each step individually.
+
 ### 1. Install `Microsoft.Extensions.Configuration` and create a custom configuration provider
 
 We can continue to read configuration values from the `web.config` while migrating to use `Microsoft.Extensions.Configuration`. [Ben Foster](https://benfoster.io/blog/net-core-configuration-legacy-projects) has written an excellent blog post on how to do this, in which he creates a custom configuration provider that reads and parses values from the `web.config`. Before doing anything else, I would recommend you:
