@@ -1,0 +1,14 @@
+<table>
+    <thead>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Link</th>
+    </thead>
+    <tbody>
+        {% assign books = site.data.reading.past %}
+        {% for book in books %}
+        {% include _talkRow.html title=book.title author=book.author link=book.link %}
+        {% endfor %}
+    </tbody>
+</table>
+
