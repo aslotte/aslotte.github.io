@@ -26,27 +26,27 @@ To safely perform this migration, I propose a 4-step approach:
 
 ### 1. Install `Microsoft.Extensions.Configuration` and create a custom configuration provider
 
-We can continue to read configuration values from the `web.config` while migrating to `Microsoft.Extensions.Configuration`. [Ben Foster](https://benfoster.io/blog/net-core-configuration-legacy-projects) has written an excellent blog post on how to do this, in which he creates a custom configuration provider that reads and parses values from the `web.config`. Before doing anything else, I would recommend you:
+We can continue to read configuration values from the `web.config` while migrating to use `Microsoft.Extensions.Configuration`. [Ben Foster](https://benfoster.io/blog/net-core-configuration-legacy-projects) has written an excellent blog post on how to do this, in which he creates a custom configuration provider that reads and parses values from the `web.config`. Before doing anything else, I would recommend you:
 
-1. Installing the following NuGet packages:
+1. Install the following NuGet packages:
 
    * `Microsoft.Extensions.Configuration`
    * `Microsoft.Extensions.Abstractions`
    * `Microsoft.Extensions.Primitives`
-2. Creating a custom configuration provider by following the steps in [Ben Foster's](https://benfoster.io/blog/net-core-configuration-legacy-projects) post
-3. Adding the following to your Global.asax or Startup.cs file
+2. Create a custom configuration provider by following the steps in [Ben Foster's](https://benfoster.io/blog/net-core-configuration-legacy-projects) post
+3. Add the following to your `Global.asax` or `Startup.cs` file
 
    ```
    IConfiguration configuration = new ConfigurationBuilder()
        .Add(new LegacyConfigurationProvider())
        .Build();
        
-     //Register IConfiguration in your DI framework
+     //Register IConfiguration in your DI framework here
    ```
 
 ### 2. Remove any static reference to the `System.Configuration.ConfigurationManager`
 
-Many legacy .NET Framework apps either directly use the static `System.Configuration.ConfigurationManager` instance to fetch their configuration values, or have their own abstraction of it so that it's not directly exposed across the application. Regardless of how your application does it, we will need to replace the usage of `System.Configuration.ConfigurationManager` across the application with `IConfiguration` registered in step 1. I would recommend doing step 1 and 2 together in the same PR, as it's a great way to set a solid foundation for our migration work. This change would then be able to safely go to production once all tests passes.  
+Many legacy .NET Framework apps either directly use the static `System.Configuration.ConfigurationManager` instance to fetch their configuration values, or have their own abstraction of it so that it's not directly exposed across the application. Regardless of how your application handles it, we will need to replace the usage of the `System.Configuration.ConfigurationManager` across the application with `IConfiguration` registered above. I would recommend doing step 1 and 2 together in the same PR. This change would then be able to safely go to production once all automated tests passes.  
 
 ### 3.  Convert `web.config` and `app.config` to `appsettings.json`
 
@@ -95,7 +95,7 @@ IConfiguration configuration = new ConfigurationBuilder()
     .Build();
     
 var featureToggles = configuration.GetSection(nameof(FeatureToggles));
-////Register your instance in your DI framework
+//Register the instance in your DI framework here
 ```
 
 ### Summary
