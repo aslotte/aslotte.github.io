@@ -5,10 +5,6 @@
         <th>Link</th>
     </thead>
     <tbody>
-        {% assign books = site.data.books.past %}
-        {% for book in books %}
-        {% include _bookRow.html title=book.title author=book.author link=book.link %}
-        {% endfor %}
     </tbody>
 </table>
 
