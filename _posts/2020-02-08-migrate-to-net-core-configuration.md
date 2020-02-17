@@ -15,7 +15,7 @@ With emphasis on safely. Let's have a look.
 
 ## A proposed solution
 
-It's possible to migrate the configuration while still targeting .NET Framework. To do so, you'll need to install and use the `Microsoft.Extensions.Configuration` package, and refactor your application to not depend on the `System.Configuration.ConfigurationManager.` This may sound easy, but it can in fact be very complex depending on the size of the application.
+It's possible to migrate our applications configuration while still targeting .NET Framework. To do so, we'll need to install and use the `Microsoft.Extensions.Configuration` package, and refactor our application to not depend on the `System.Configuration.ConfigurationManager.` This may sound easy, but it can in fact be very complex depending on the size of the application.
 
 To safely perform this migration, I propose a 4-step approach:
 
@@ -73,8 +73,6 @@ Take full advantage of sections.
 #### 3.2 Configuration values are now retrieved by `Section:Key`
 
 As we are now using sections, we'll have to make sure to update any reference to a config value so that it is prefixed with the section name. This can be easy to forget, especially if you're using a tool such as Octopus to transform your configuration before deployment.
-
-
 
 ### 4. Leverage strongly typed configuration classes
 
