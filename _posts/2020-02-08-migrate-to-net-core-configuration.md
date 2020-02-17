@@ -2,6 +2,7 @@
 title: Migrating configuration in .NET Framework to .NET Core
 comments: true
 image: /images/post-images/rima-kruciene-gpKe3hmIawg-unsplash.jpg
+twitter:image: /images/post-images/rima-kruciene-gpKe3hmIawg-unsplash.jpg
 tags:
   - 'dotnetcore configuration'
 date: '2020-02-16 08:44 -0500'
