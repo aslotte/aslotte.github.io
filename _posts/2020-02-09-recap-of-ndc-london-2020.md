@@ -1,6 +1,7 @@
 ---
 title: Recap of NDC London 2020
 comments: true
+image: /images/post-images/IMG_20200130_173307.jpg
 tags:
   - ndc ndclondon speaking dotnetcore mlnet
 date: '2020-02-08 18:48 -0500'

@@ -1,6 +1,7 @@
 ---
 title: My First Week as a Microsoft MVP
 comments: true
+image: /images/post-images/MVP_Logo_Horizontal_Preferred_Cyan300_RGB_300ppi.png
 tags:
   - '#mvp #speaking #dotnet'
 date: '2020-02-10 17:20 -0500'
