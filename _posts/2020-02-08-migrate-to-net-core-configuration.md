@@ -15,7 +15,7 @@ With emphasis on safely. Let's have a look.
 
 ## A proposed solution
 
-It's possible to migrate your configuration while still targeting .NET Framework. To do so, you'll need to install and use the `Microsoft.Extensions.Configuration` package, and refactor your application to not depend on the `System.Configuration.ConfigurationManager.` This may sound easy, but it can in fact be very complex depending on the size of the application.
+It's possible to migrate the configuration while still targeting .NET Framework. To do so, you'll need to install and use the `Microsoft.Extensions.Configuration` package, and refactor your application to not depend on the `System.Configuration.ConfigurationManager.` This may sound easy, but it can in fact be very complex depending on the size of the application.
 
 To safely perform this migration, I propose a 4-step approach:
 
