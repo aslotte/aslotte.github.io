@@ -89,7 +89,7 @@ public class FeatureToggles
 }
 ```
 
-We can then bind classes to each section and register them in our DI framework, which will allow us to inject specific settings classes only to instances that depend on them. A great separation of concern.
+We can then bind a class to each section and register the instance in our DI framework, which will allow us to inject specific settings classes only to instances that depend on them. A great separation of concern.
 
 ```
 IConfiguration configuration = new ConfigurationBuilder()
