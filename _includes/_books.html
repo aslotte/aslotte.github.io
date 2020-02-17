@@ -5,7 +5,7 @@
         <th>Link</th>
     </thead>
     <tbody>
-        {% assign books = site.data.reading.past %}
+        {% assign books = site.data.books.past %}
         {% for book in books %}
         {% include _talkRow.html title=book.title author=book.author link=book.link %}
         {% endfor %}
