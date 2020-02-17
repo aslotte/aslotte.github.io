@@ -11,19 +11,17 @@ Migrating an enterprise application from .NET Framework to .NET Core can both be
 
 With emphasis on safely. Let's have a look. 
 
-
-
 ![](/images/post-images/rima-kruciene-gpKe3hmIawg-unsplash.jpg)
 
 ## A proposed solution
 
-It's possible to migrate your configuration while still targeting .NET Framework. To do so, you'll need install and use the `Microsoft.Extensions.Configuration` package, and refactor your application to not depend on `System.Configuration.ConfigurationManager.` This can sound very easy, but it can in fact be very complex depending on the size of the application.
+It's possible to migrate your configuration while still targeting .NET Framework. To do so, you'll need to install and use the `Microsoft.Extensions.Configuration` package, and refactor your application to not depend on the `System.Configuration.ConfigurationManager.` This may sound easy, but it can in fact be very complex depending on the size of the application.
 
 To safely perform this migration, I propose a 4-step approach:
 
 1. Install `Microsoft.Extensions.Configuration` and create a custom configuration provider 
-2. Remove any static reference to `System.Configuration.ConfigurationManager`
-3. Convert `web.config`/`app.config` to `appsettings.json`
+2. Remove any static reference to the `System.Configuration.ConfigurationManager`
+3. Convert `web.config` and `app.config` to `appsettings.json`
 4. Leverage strongly typed configuration classes
 
 ### 1. Install `Microsoft.Extensions.Configuration` and create a custom configuration provider
@@ -46,7 +44,7 @@ We can continue to read configuration values from the `web.config` while migrati
      //Register IConfiguration in your DI framework
    ```
 
-### 2. Remove any static reference to `System.Configuration.ConfigurationManager`
+### 2. Remove any static reference to the `System.Configuration.ConfigurationManager`
 
 Many legacy .NET Framework apps either directly use the static `System.Configuration.ConfigurationManager` instance to fetch their configuration values, or have their own abstraction of it so that it's not directly exposed across the application. Regardless of how your application does it, we will need to replace the usage of `System.Configuration.ConfigurationManager` across the application with `IConfiguration` registered in step 1. I would recommend doing step 1 and 2 together in the same PR, as it's a great way to set a solid foundation for our migration work. This change would then be able to safely go to production once all tests passes.  
 
