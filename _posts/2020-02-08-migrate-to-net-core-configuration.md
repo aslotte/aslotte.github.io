@@ -3,7 +3,7 @@ title: Migrating configuration in .NET Framework to .NET Core
 comments: true
 tags:
   - '#dotnetcore #configuration'
-date: '2020-02-08 08:44 -0500'
+date: '2020-02-16 08:44 -0500'
 ---
 ## The challenge
 
