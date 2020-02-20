@@ -8,5 +8,8 @@ comments: false
 
 Reading is a passion of mine. There are so many great books out there so I thought I would highlight a couple that has shaped my career
 
-## Books 
+## Currently reading
+{% include booksCurrent.html %}
+
+## Recommend 
 {% include books.html %}
