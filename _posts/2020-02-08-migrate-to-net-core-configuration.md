@@ -1,15 +1,13 @@
 ---
 title: Migrating configuration in .NET Framework to .NET Core
 comments: true
-image: /images/post-images/rima-kruciene-gpKe3hmIawg-unsplash.jpg
-twitter:image: /images/post-images/rima-kruciene-gpKe3hmIawg-unsplash.jpg
 tags:
-  - 'dotnetcore configuration'
+  - dotnetcore configuration
 date: '2020-02-16 08:44 -0500'
 ---
 ## The challenge
 
-Migrating an enterprise application from .NET Framework to .NET Core can both be a lot of work and risky. But the benefits once complete are well worth the effort. One of the many things that have been improved is configuration management. Configuration management in .NET Core is awesome. Not only is it primarily JSON based with cleanly divided sections, but it's also possible to have your application read from multiple sources such as environmental variables, Azure Key Vault and so forth. The hot reload options and the ability to out of the box bind sections to strongly typed classes makes the migration worthwhile. But how do one go about safely migrating a legacy app's XML based configuration to .NET Core's JSON based style? 
+Migrating an enterprise application from .NET Framework to .NET Core can both be a lot of work and risky. But the benefits once complete are well worth the effort. One of the many things that have been improved is configuration management. Configuration management in .NET Core is awesome. Not only is it primarily JSON based with cleanly divided sections, but it's also possible to have your application read from multiple sources such as environmental variables, Azure Key Vault and so forth. The hot reload options and the ability to out of the box bind sections to strongly typed classes makes the migration worthwhile. But how does one go about safely migrating a legacy app's XML based configuration to .NET Core's JSON based style? 
 
 With emphasis on safely. Let's have a look. 
 
