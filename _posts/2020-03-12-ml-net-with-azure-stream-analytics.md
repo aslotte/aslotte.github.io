@@ -35,7 +35,7 @@ Visual Studio has fantastic support for Azure Stream Analytics, and if you downl
 
 The example that will be used throughout this post will be one of a real-time fraud detector that will examine incoming transactions to determine if they are fraudulent or not. The full source code can be found [here](https://github.com/aslotte/fraudulentstream).
 
-[﻿For simplicity’s sake](https://github.com/aslotte/fraudulentstream), we are going to assume we already have a trained ML.NET model (which you can find in the repo). 
+﻿For simplicity’s sake, we are going to assume we already have a trained ML.NET model (which you can find in the repo). 
 
 ### Setting up the Azure Stream Analytics query
 
