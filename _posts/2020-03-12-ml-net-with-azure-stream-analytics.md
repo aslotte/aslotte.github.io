@@ -11,7 +11,7 @@ Integrating ML.NET with Azure Stream Analytics is something I've been wanting to
 
 ## Real-time Inference in Azure
 
-Real-time inference in Azure Stream Analytics is nothing new, and it has been possible to do for a while. The most common approach has been to call a classic Azure Machine Learning Studio web service directly from the continuous query. There are a number of limitations with this approach and to just mention one, you're forced to train and host your model in Azure ML Studio which does not offer support for open-source libraries such as Tensorflow. To counter that, the Azure Stream Analytics team just released preview support for the new Azure Machine Learning service. This in itself is a great leap forward, but as Azure Machine Learning still doesn't support C# and ML.NET, it does not meet the needs of the .NET community. 
+Real-time inference in Azure Stream Analytics is nothing new, and it has been possible to do for a while. The most common approach has been to directly call a web service hosted by the classic Azure Machine Learning Studio from the continuous query. There are a number of limitations with this approach and to just mention one, you're forced to train and host your model in Azure ML Studio which does not offer support for open-source libraries such as Tensorflow. To counter that, the Azure Stream Analytics team just released preview support for the new Azure Machine Learning service. This in itself is a great leap forward, but as Azure Machine Learning still doesn't support C# and ML.NET, it does not meet the needs of the .NET community. 
 
 ![Azure Stream Analytics with Azure Machine Learning Service (classic)](/images/post-images/azureml.jpg)
 
