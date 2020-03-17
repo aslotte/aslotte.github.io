@@ -113,11 +113,11 @@ The first issue you'll run into is the casting of the numeric values. Although t
 
 ### 2. Include assembly references
 
-The second thing you'll need to do is to remove your package references to ML.NET and instead directly add the DLLs you depend on as assembly references. This is due to the way Azure Stream Analytics currently handles C# UDFs. Your dependencies should now look as follows:
+The second thing you'll need to do is to remove your NuGet package references to ML.NET and instead directly add the DLLs you depend on as assembly references. This is a little finicky but due to Azure Stream Analytics' handling of  C# UDFs. Your dependencies should now look as follows:
 
 ![](/images/post-images/assemblyref.png)
 
-With these changes you should now be able to run your job locally and in the output window you'll see real-time predictions on each incoming transaction.
+With these changes you should now be able to run your job locally and in the output window you'll see real-time predictions on each incoming transaction. Congratulations!
 
 ![](/images/post-images/asarunning.png)
 
