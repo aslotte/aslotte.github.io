@@ -72,6 +72,8 @@ To define an input, right-click on the input folder and select to add a new item
 
 ![](/images/post-images/localinput.jpg)
 
+Nice work! If you hit F5 now or select to run the job locally, you'll see Azure Stream Analytics read the content of the file and output it into the output window in Visual Studio. That's all well and good but not what we set out to achieve. What we now want to do is to capture the moving data stream and for each transaction use ML.NET to determine if the transaction is fraudulent or not. To our help we have user-defined functions (UDF). You're currently able to write UDFs in either JavaScript or C#. They can be written as code-behind (I know, gives me nightmares too), or in a separate project that you reference. What we will do is create a separate project to host our ML.NET prediction engine. 
+
 
 
 \- Assemblies
