@@ -107,7 +107,7 @@ Nice! If you now kick of the job by hitting F5 it will....fail. Wait, what? Well
 
 ### 1. Floats should actually be doubles
 
-The first issue you'll run into is the casting of the numeric values. Although the C# UDF you defined earlier expects the numeric values to be of type `float`, you'll actually have to define your input values as doubles in your `Predict` method for things to work smoothly. This is not at all intuitive and I've reported it as a bug to the Azure Stream Analytics team.
+The first issue you'll run into is the casting of the numeric values. Although the C# UDF you defined earlier expects the numeric values to be of type `float`, you'll actually have to define your input values as `doubles` in your `Predict` method, in order for things to work smoothly. This is not at all intuitive and I've reported it as a bug to the Azure Stream Analytics team.
 
 ![](/images/post-images/functionwithfloats.jpg)
 
