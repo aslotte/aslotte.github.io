@@ -103,10 +103,22 @@ INTO output
 FROM input
 ```
 
-\- Assemblies
+Nice! If you kick of the job now by hitting F5 it will....fail. Why is that? Well, there're a couple of reasons, some which I want to highlight here to help others out there. 
 
-\- Float/double
 
-\- Build before adding function
 
-\- ModelInput needs to be split to each argument
+### 1. Numeric inputs cannot be floats
+
+The first issue you'll run into is the casting of the numeric values. Although the C# UDF you defined earlier expects the numeric values to be of type `float`, you'll actually have to define your input values as doubles in your `Predict` method for thing to work smoothly. This is not at all intuitive and I've reported it as a bug to the Azure Stream Analytics team.
+
+
+
+## 2. Assembly references for dependencies
+
+The second thing you'll need to do is to remove your package references to ML.NET and instead directly add the DLLs you depend on as assembly references. This is due to the way Azure Stream Analytics currently handles C# UDFs. Your dependencies should now look as follows:
+
+![](/images/post-images/assemblyref.png)
+
+
+
+## Conclusion
