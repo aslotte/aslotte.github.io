@@ -47,7 +47,7 @@ INTO output
 FROM input
 ```
 
-The logical question that follows is how do we define an input, and what options do we have? Azure Stream Analytics in Visual Studio supports both cloud inputs from e.g. an Event Hub, or local inputs reading from a JSON or CSV file. For our purposes, we'll be using a local JSON file, which you can find [here](https://github.com/aslotte/fraudulentstream/blob/master/FraudulentStream/FraudulentStream/input.json), and looks something like this:
+The logical question that follows is how do we define an input, and what options do we have? Azure Stream Analytics in Visual Studio supports both cloud inputs from e.g. an Event Hub, or local inputs reading from a `JSON `or `CSV` file. For our purposes, we'll be using a local `JSON` file, which you can find [here](https://github.com/aslotte/fraudulentstream/blob/master/FraudulentStream/FraudulentStream/input.json). The content of the file looks as follows:
 
 ```
 [
@@ -68,11 +68,11 @@ The logical question that follows is how do we define an input, and what options
 ]
 ```
 
-To define an input, right-click on the input folder and select to add a new item. In the list that appears, select to add a `Local Input`. Once added, double-click on the newly added file to define name, type and path to the local JSON file we will be using:
+To define an input, right-click on the input folder and select to add a new item. In the list that appears, select to add a `Local Input`. Once added, double-click on the newly added file to define name, type and path to the local `JSON` file we will be using:
 
 ![](/images/post-images/localinput.jpg)
 
-Nice work! If you hit F5 now or select to run the job locally, you'll see Azure Stream Analytics read the content of the file and output it into the output window in Visual Studio. That's all well and good but not what we set out to achieve. What we now want to do is to capture the moving data stream and for each transaction use ML.NET to determine if the transaction is fraudulent or not. To our help we have user-defined functions (UDF). You're currently able to write UDFs in either JavaScript or C#. They can be written as code-behind (I know, gives me nightmares too), or in a separate project that you reference. What we will do is create a separate project to host our ML.NET prediction engine. 
+Nice work! If you now hit F5 or select to run the job locally, you'll see Azure Stream Analytics read the content of the file and dump it into the output window in Visual Studio. That's all well and good but not what we set out to achieve. What we now want to do is to capture the moving data stream and for each transaction use ML.NET to determine if the transaction is fraudulent or not. To our help we have UDFs. You're currently able to write UDFs in either JavaScript or C#. They can be written as code-behind (I know, gives me nightmares too), or in a separate project that you reference. What we will do is create a separate project to host our ML.NET prediction engine. 
 
 ### Running ML.NET in a C# UFF
 
