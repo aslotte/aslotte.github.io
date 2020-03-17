@@ -5,6 +5,8 @@ tags:
   - mlnet azurestreamanalytics
 date: '2020-03-12 19:53 -0400'
 ---
+
+
 In this post I will explain how we can set up a real-time data streaming pipeline to achieve real-time inference with ML.NET using Azure Stream Analytics and C# user-defined functions (UDF).
 
 Integrating ML.NET with Azure Stream Analytics is something I've been wanting to do for almost a year, and it's kind of funny story how all of this came about. I'd previously worked extensively with Azure Stream Analytics and ML.NET separately, but never together. When ProgNET's CFP in London went live in April/May of 2019, I thought to myself, why not submit a half-day workshop on how to build a model from scratch and deploying it to a real-time data pipeline in Azure. Little did I know that what I was envisioning was not yet possible, and something I probably should have confirmed before getting accepted to speak. Fortunately for me I was able to work around it using Azure Functions for my workshop, but today I'm thrilled to see that Azure Stream Analytics finally offers native support for ML.NET.
@@ -32,3 +34,46 @@ To get started make sure you have the following installed:
 Visual Studio has fantastic support for Azure Stream Analytics, and if you download the *Azure Data Lake and Stream Analytics* VS extension, you'll be well looked after. To get started, open up Visual Studio and select to create a new project of type *Azure Stream Analytics Application.*
 
 ![](/images/post-images/asaprojecttemplate.jpg)
+
+The example that will be used throughout this post will be one of a real-time fraud detector that will examine incoming transactions to determine if they are fraudulent or not. The full source code can be found [here](https://github.com/aslotte/fraudulentstream).
+
+[﻿For simplicity’s sake](https://github.com/aslotte/fraudulentstream), we are going to assume we already have a trained ML.NET model (which you can find in the repo). 
+
+### Setting up the Azure Stream Analytics query
+
+The first thing we need to do is to define the continuous query. To get comfortable with Azure Stream Analytics, we'll start by defining a query that reads everything from an input and dumps it to the output window in Visual Studio. The query will be as simple as:
+
+```
+SELECT *
+INTO output
+FROM input
+```
+
+The logical question that follows is how do we define an input, and what options do we have? Azure Stream Analytics in Visual Studio supports both cloud inputs from e.g. an Event Hub, or local inputs reading from a JSON or CSV file. For our purposes, we'll be using a local JSON file, which you can find [here](https://github.com/aslotte/fraudulentstream/blob/master/FraudulentStream/FraudulentStream/input.json), and looks something like this:
+
+```
+[
+  {
+    "Step": 1,
+    "Type": "PAYMENT",
+    "Amount": 4833.96,
+    "NameOrig": "C1060042118",
+    "OldBalanceOrg": 41005,
+    "NewBalanceOrig": 36171.04,
+    "NameDest": "M1964847681",
+    "OldBalanceDest": 0,
+    "NewBalanceDest": 0,
+    "EventProcessedUtcTime": "2020-03-16T21:36:31.9415576Z",
+    "PartitionId": 0,
+    "EventEnqueuedUtcTime": "2020-03-16T21:33:28.0140000Z"
+  }
+  ]
+```
+
+\- Assemblies
+
+\- Float/double
+
+\- Build before adding function
+
+\- ModelInput needs to be split to each argument
