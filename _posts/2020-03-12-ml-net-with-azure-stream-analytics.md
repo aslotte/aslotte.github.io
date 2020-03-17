@@ -107,7 +107,7 @@ Nice! If you now kick of the job by hitting F5 it will....fail. Why is that? Wel
 
 ### 1. Floats should actually be doubles
 
-The first issue you'll run into is the casting of the numeric values. Although the C# UDF you defined earlier expects the numeric values to be of type `float`, you'll actually have to define your input values as doubles in your `Predict` method for thing to work smoothly. This is not at all intuitive and I've reported it as a bug to the Azure Stream Analytics team.
+The first issue you'll run into is the casting of the numeric values. Although the C# UDF you defined earlier expects the numeric values to be of type `float`, you'll actually have to define your input values as doubles in your `Predict` method for things to work smoothly. This is not at all intuitive and I've reported it as a bug to the Azure Stream Analytics team.
 
 ![](/images/post-images/functionwithfloats.jpg)
 
@@ -117,7 +117,7 @@ The second thing you'll need to do is to remove your NuGet package references to
 
 ![](/images/post-images/assemblyref.png)
 
-With these changes you should now be able to run your job locally and in the output window you'll see real-time predictions on each incoming transaction. Congratulations!
+With these changes complete, you should now be able to run your job locally and in the output window you'll see real-time predictions on each incoming transaction. Congratulations!
 
 ![](/images/post-images/asarunning.png)
 
