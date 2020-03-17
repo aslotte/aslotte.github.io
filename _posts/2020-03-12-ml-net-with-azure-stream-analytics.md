@@ -112,11 +112,13 @@ The first issue you'll run into is the casting of the numeric values. Although t
 
 ![](/images/post-images/functionwithfloats.jpg)
 
-### 2. Include assembly references
+### 2. Include assembly references or use the specific UDF project type
 
-The second thing you'll need to do is to remove your NuGet package references to ML.NET and instead directly add the DLLs you depend on as assembly references. This is a little finicky but due to Azure Stream Analytics' handling of  C# UDFs. Your dependencies should now look as follows:
+The second thing you may notice is that your dependencies to ML.NET may not be properly loaded. There are two solutions to this problem. The first one is to remove your NuGet package references to ML.NET and instead directly add the DLLs you depend on as assembly references. Your dependencies should now look as follows:
 
 ![](/images/post-images/assemblyref.png)
+
+The second approach, which I would recommend, is to re-create the project using the `Azure Stream Analytics UDF Project` template. By using this project template, you'll have support for NuGet packages as well.
 
 With these changes complete, you should now be able to run your job locally and in the output window you'll see real-time predictions on each incoming transaction. Congratulations!
 
