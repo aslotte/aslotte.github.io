@@ -123,4 +123,4 @@ With these changes complete, you should now be able to run your job locally and 
 
 ## Conclusion
 
-In this post I've walked you through how to get started with real-time inference using Azure Stream Analytics and ML.NET. I'm thrilled to see this addition to Azure Stream Analytic's capabilities, and the steps taken to make ML.NET a first-class citizen in Azure. Happy coding!
+In this post I've walked you through how to get started using Azure Stream Analytics together with ML.NET. I'm thrilled to see this addition to Azure Stream Analytic's capabilities, and the steps taken to make ML.NET a first-class citizen in Azure. Happy coding!
