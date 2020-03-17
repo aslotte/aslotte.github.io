@@ -1,7 +1,7 @@
 ---
 title: Real-Time Inference with ML.NET and Azure Stream Analytics
 comments: true
-image: /images/post-images/azureml.jpg
+image: /images/post-images/realtime.jpg
 tags:
   - '#mlnet #streamanalytics #azure #machinelearning'
 date: '2020-03-12 19:53 -0400'
