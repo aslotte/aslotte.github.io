@@ -115,14 +115,10 @@ The second thing you'll need to do is to remove your package references to ML.NE
 
 ![](/images/post-images/assemblyref.png)
 
-
-
-With these changes you should now be able to run your job locally and in the output window you'll see real-time predictions on each incoming transaction
+With these changes you should now be able to run your job locally and in the output window you'll see real-time predictions on each incoming transaction.
 
 ![](/images/post-images/asarunning.png)
 
-
-
-
-
 ## Conclusion
+
+In this post I've walked you through how to get started with real-time inference using Azure Stream Analytics and ML.NET. I'm thrilled to see this addition to Azure Stream Analytic's capabilities, and the steps taken to make ML.NET a first-class citizen in Azure. Happy coding!
