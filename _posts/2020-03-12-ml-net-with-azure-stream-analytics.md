@@ -11,11 +11,23 @@ Integrating ML.NET with Azure Stream Analytics is something I've been wanting to
 
 
 
+## Real-time Inference in Azure
+
+Real-time inference in Azure Stream Analytics is nothing new, and it has been possible to do for a while. The most common approach has been to call a classic Azure Machine Learning Studio web service directly from the continuous query. There are a number of limitations with this approach, for one the fact that you have to host your model in Azure Machine Learning Studio which does not offer support for open-source libraries such as Tensorflow as well as having a limitation of your dataset size. To counter that, the Azure Stream Analytics team released preview support for the new Azure Machine Learning service in the fall of 2019. This in itself is a great leap forward, but as Azure Machine Learning still doesn't support C# and ML.NET, it does not meet the needs of the .NET community. 
+
+![Azure Stream Analytics with Azure Machine Learning Service (classic)](/images/post-images/azuremlservice.jpg)
+
+![Azure Stream Analytics with Azure Machine Learning ](/images/post-images/azureml.jpg)
+
+As you may know, ML.NET is an open-source, cross-platform library for machine learning in .NET. To be able to integrate an ML.NET model with Azure Stream Analytics, we need the ability to call it through a C# user-defined function. Azure Stream Analytics Edge (run on IoT devices) have had the possibility to create C# UDF's for a while, but it's not until this fall this support has arrived to the cloud alternative. 
+
+![Azure Stream Analytics with ML.NET in a C# UDF](/images/post-images/mlnet.jpg)
 
 
 
+## Assumptions
 
-
+## Getting started
 
 \- Explain C# UDF with Azure Stream Analytics
 
