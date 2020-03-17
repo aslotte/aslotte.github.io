@@ -84,11 +84,11 @@ To ensure I focus on some gotchas in this post, I encourage everyone to take a l
 
 If you use the [Model Builder](https://dotnet.microsoft.com/apps/machinelearning-ai/ml-dotnet/model-builder) to create your model, the tool will automatically create a project that is set up in this fashion. 
 
-Once you have created your project, built the solution, and added a reference to the Azure Stream Analytics project, you can define a C# UDF that can be called from the continuous query. To set up a C# UDF, right click on the `Functions` folder and select to add a new item. In the list that appears, select a `C# Function`. If you then double-click on the function, you'll get the opportunity to define the class library you've just added as well as the method you'll like Azure Stream Analytics to call to inference. 
+Once you have created your project, built the solution, and added a reference to the Azure Stream Analytics project, you can define a C# UDF that can be called from the continuous query. To set up a C# UDF, right click on the `Functions` folder and select to add a new item. In the list that appears, select a `C# Function`. If you then double-click on the function, you'll get the opportunity to define the class library you've just added as well as the method you'll like Azure Stream Analytics to call for real-time inference. 
 
 ![](/images/post-images/function1.jpg)
 
-With the C# UDF defined, you can now update your query to call the function directly as such (note the `udf.IsFraud)`
+With the C# UDF defined, you can now update your query to call the function directly (okease note the `udf.IsFraud)`
 
 ```
 SELECT udf.IsFraud(
@@ -103,11 +103,13 @@ INTO output
 FROM input
 ```
 
-Nice! If you kick of the job now by hitting F5 it will....fail. Why is that? Well, there're a couple of reasons, some which I want to highlight here to help others out there. 
+Nice! If you now kick of the job by hitting F5 it will....fail. Why is that? Well, there're a couple of reasons, some which I want to highlight here to help others out there. 
 
 ### 1. Floats should actually be doubles
 
 The first issue you'll run into is the casting of the numeric values. Although the C# UDF you defined earlier expects the numeric values to be of type `float`, you'll actually have to define your input values as doubles in your `Predict` method for thing to work smoothly. This is not at all intuitive and I've reported it as a bug to the Azure Stream Analytics team.
+
+![](/images/post-images/functionwithfloats.jpg)
 
 ### 2. Include assembly references
 
