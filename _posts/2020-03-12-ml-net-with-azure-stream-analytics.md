@@ -17,12 +17,12 @@ Real-time inference in Azure Stream Analytics is nothing new, and it has been po
 
 As you may know, ML.NET is an open-source, cross-platform library for machine learning in .NET. To be able to integrate an ML.NET model with Azure Stream Analytics, we need the ability to call it through a C# user-defined function. Azure Stream Analytics Edge (run on IoT devices) have had the possibility to create C# UDF's for a while, but it's not until this fall this support has arrived to the cloud alternative. 
 
-## Assumptions
+Let' see how we can get started.
 
-## Getting started
+## Prerequisites
 
-\- Explain C# UDF with Azure Stream Analytics
+To get started make sure you have the following installed:
 
-\- Why is this cool?
-
-\- Show examples
+* Visual Studio 2019
+* The "Azure Data Lake and Stream Analytics Tool" Visual Studio extension
+* .NET Core SDK v3.1
