@@ -29,7 +29,7 @@ To get started make sure you have the following installed:
 
 ## Setting up an Azure Stream Analytics Project
 
-Visual Studio has fantastic support for Azure Stream Analytics, and if you download the *Azure Data Lake and Stream Analytics* VS extension, you'll be well looked after. To get started, open up Visual Studio and select to create a new project of type *Azure Stream Analytics Application.*
+Visual Studio has fantastic support for Azure Stream Analytics, and if you download the `Azure Data Lake and Stream Analytics` VS extension, you'll be well looked after. To get started, open up Visual Studio and select to create a new project of type `Azure Stream Analytics Application`*.*
 
 ![](/images/post-images/asaprojecttemplate.jpg)
 
