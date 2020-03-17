@@ -2,7 +2,7 @@
 title: Real-Time Inference with ML.NET and Azure Stream Analytics
 comments: true
 tags:
-  - mlnet azurestreamanalytics
+  - '#mlnet #streamanalytics #azure #machinelearning'
 date: '2020-03-12 19:53 -0400'
 ---
 In this post I will explain how we can set up a real-time data streaming pipeline to achieve real-time inference with ML.NET using Azure Stream Analytics and C# user-defined functions (UDF).
