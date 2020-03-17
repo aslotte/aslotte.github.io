@@ -76,6 +76,24 @@ Nice work! If you hit F5 now or select to run the job locally, you'll see Azure 
 
 
 
+### Running ML.NET in a C# UFF
+
+To ensure I focus on some gotchas in this post, I encourage everyone to take a look at my [repo](https://github.com/aslotte/fraudulentstream) to see how a boilerplate C# project can be setup to:
+
+1. Define `ModelInput.cs` and `ModelOutput.cs`
+2. Load an ML.NET model into memory
+3. Create a `PreictionEngine<TInput, TOutput>` 
+
+If you use the [Model Builder](https://dotnet.microsoft.com/apps/machinelearning-ai/ml-dotnet/model-builder) to create your model, the tool will automatically create a project that is set up in this way. 
+
+Once you have your project, you can define a C# UDF that can be called from the Azure Stream Analytic's continuous query. To set up a C# UDF, right click on the `Functions` folder and select to add a new item. In the list that appears, select a `C# Function`. If you then double-click on the function, you're able to define the method in your newly added project you want this function to call:
+
+![](/images/post-images/function1.jpg)
+
+
+
+
+
 \- Assemblies
 
 \- Float/double
