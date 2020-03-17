@@ -47,7 +47,7 @@ INTO output
 FROM input
 ```
 
-The logical question that follows is how do we define an input, and what options do we have? Azure Stream Analytics in Visual Studio supports both cloud inputs from e.g. an Event Hub, or local inputs reading from a `JSON `or `CSV` file. For our purposes, we'll be using a local `JSON` file, which you can find [here](https://github.com/aslotte/fraudulentstream/blob/master/FraudulentStream/FraudulentStream/input.json). The content of the file looks as follows:
+The logical question that follows is how do we define an input, and what options do we have? Azure Stream Analytics in Visual Studio supports both cloud inputs from e.g. an Event Hub, or local inputs reading from a `JSON`or `CSV` file. For our purposes, we'll be using a local `JSON` file, which you can find [here](https://github.com/aslotte/fraudulentstream/blob/master/FraudulentStream/FraudulentStream/input.json). The content of the file looks as follows:
 
 ```
 [
@@ -84,11 +84,11 @@ To ensure I focus on some gotchas in this post, I encourage everyone to take a l
 
 If you use the [Model Builder](https://dotnet.microsoft.com/apps/machinelearning-ai/ml-dotnet/model-builder) to create your model, the tool will automatically create a project that is set up in this fashion. 
 
-Once you have created your project, built the solution, and added a reference to the Azure Stream Analytics project, you can define a C# UDF that can be called from the continuous query. To set up a C# UDF, right click on the `Functions` folder and select to add a new item. In the list that appears, select a `C# Function`. If you then double-click on the function, you'll get the opportunity to define the class library you've just added as well as the method you'll like Azure Stream Analytics to call for real-time inference. 
+Once you have created your project, built the solution, and added a reference to the Azure Stream Analytics project, you can define a C# UDF that can be called inline from the continuous query. To set up a C# UDF, right click on the `Functions` folder and select to add a new item. In the list that appears, select a `C# Function`. If you then double-click on the function, you'll get the opportunity to define the class library you've just added as well as the method you'll like Azure Stream Analytics to call for real-time inference. 
 
 ![](/images/post-images/function1.jpg)
 
-With the C# UDF defined, you can now update your query to call the function directly (okease note the `udf.IsFraud)`
+With the C# UDF defined, you can now update your query to call the function directly (please note `udf.IsFraud)`
 
 ```
 SELECT udf.IsFraud(
@@ -103,7 +103,7 @@ INTO output
 FROM input
 ```
 
-Nice! If you now kick of the job by hitting F5 it will....fail. Why is that? Well, there're a couple of reasons, some which I want to highlight here to help others out there. 
+Nice! If you now kick of the job by hitting F5 it will....fail. Wait, what? Well, there're a couple of reasons for this, some which I want to highlight here to help others. 
 
 ### 1. Floats should actually be doubles
 
