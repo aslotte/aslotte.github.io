@@ -65,7 +65,7 @@ The logical question that follows is how do we define an input, and what options
     "PartitionId": 0,
     "EventEnqueuedUtcTime": "2020-03-16T21:33:28.0140000Z"
   }
-  ]
+]
 ```
 
 To define an input, right-click on the input folder and select to add a new item. In the list that appears, select to add a local input. Once added, double-click on the newly added file to define name, type and path to the local JSON file we will be using:
