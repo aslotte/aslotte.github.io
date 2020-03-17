@@ -68,7 +68,7 @@ The logical question that follows is how do we define an input, and what options
 ]
 ```
 
-To define an input, right-click on the input folder and select to add a new item. In the list that appears, select to add a local input. Once added, double-click on the newly added file to define name, type and path to the local JSON file we will be using:
+To define an input, right-click on the input folder and select to add a new item. In the list that appears, select to add a `Local Input`. Once added, double-click on the newly added file to define name, type and path to the local JSON file we will be using:
 
 ![](/images/post-images/localinput.jpg)
 
@@ -82,9 +82,9 @@ To ensure I focus on some gotchas in this post, I encourage everyone to take a l
 2. Load an ML.NET model into memory
 3. Create a `PreictionEngine<TInput, TOutput>` 
 
-If you use the [Model Builder](https://dotnet.microsoft.com/apps/machinelearning-ai/ml-dotnet/model-builder) to create your model, the tool will automatically create a project that is set up in this way. 
+If you use the [Model Builder](https://dotnet.microsoft.com/apps/machinelearning-ai/ml-dotnet/model-builder) to create your model, the tool will automatically create a project that is set up in this fashion. 
 
-Once you have your project, you can define a C# UDF that can be called from the Azure Stream Analytic's continuous query. To set up a C# UDF, right click on the `Functions` folder and select to add a new item. In the list that appears, select a `C# Function`. If you then double-click on the function, you'll get the opportunity to define the class library you've just added as well as the method you'll like Azure Stream Analytics to call to inference. 
+Once you have created your project, built the solution, and added a reference to the Azure Stream Analytics project, you can define a C# UDF that can be called from the continuous query. To set up a C# UDF, right click on the `Functions` folder and select to add a new item. In the list that appears, select a `C# Function`. If you then double-click on the function, you'll get the opportunity to define the class library you've just added as well as the method you'll like Azure Stream Analytics to call to inference. 
 
 ![](/images/post-images/function1.jpg)
 
