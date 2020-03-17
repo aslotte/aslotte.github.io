@@ -74,8 +74,6 @@ To define an input, right-click on the input folder and select to add a new item
 
 Nice work! If you hit F5 now or select to run the job locally, you'll see Azure Stream Analytics read the content of the file and output it into the output window in Visual Studio. That's all well and good but not what we set out to achieve. What we now want to do is to capture the moving data stream and for each transaction use ML.NET to determine if the transaction is fraudulent or not. To our help we have user-defined functions (UDF). You're currently able to write UDFs in either JavaScript or C#. They can be written as code-behind (I know, gives me nightmares too), or in a separate project that you reference. What we will do is create a separate project to host our ML.NET prediction engine. 
 
-
-
 ### Running ML.NET in a C# UFF
 
 To ensure I focus on some gotchas in this post, I encourage everyone to take a look at my [repo](https://github.com/aslotte/fraudulentstream) to see how a boilerplate C# project can be setup to:
@@ -86,13 +84,24 @@ To ensure I focus on some gotchas in this post, I encourage everyone to take a l
 
 If you use the [Model Builder](https://dotnet.microsoft.com/apps/machinelearning-ai/ml-dotnet/model-builder) to create your model, the tool will automatically create a project that is set up in this way. 
 
-Once you have your project, you can define a C# UDF that can be called from the Azure Stream Analytic's continuous query. To set up a C# UDF, right click on the `Functions` folder and select to add a new item. In the list that appears, select a `C# Function`. If you then double-click on the function, you're able to define the method in your newly added project you want this function to call:
+Once you have your project, you can define a C# UDF that can be called from the Azure Stream Analytic's continuous query. To set up a C# UDF, right click on the `Functions` folder and select to add a new item. In the list that appears, select a `C# Function`. If you then double-click on the function, you'll get the opportunity to define the class library you've just added as well as the method you'll like Azure Stream Analytics to call to inference. 
 
 ![](/images/post-images/function1.jpg)
 
+With the C# UDF defined, you can now update your query to call the function directly as such (note the `udf.IsFraud)`
 
-
-
+```
+SELECT udf.IsFraud(
+    Type, 
+    NameDest, 
+    Amount, 
+    OldBalanceOrg, 
+    OldBalanceDest, 
+    NewBalanceOrig, 
+    NewBalanceDest)
+INTO output
+FROM input
+```
 
 \- Assemblies
 
