@@ -1,5 +1,5 @@
 ---
-title: ML.NET with Azure Stream Analytics
+title: Real-Time Inference with ML.NET and Azure Stream Analytics
 comments: true
 tags:
   - mlnet azurestreamanalytics
