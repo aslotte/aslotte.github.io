@@ -5,6 +5,10 @@ tags:
   - '#machinelearning #growyourbusiness'
 date: '2020-03-19 13:02 -0400'
 ---
+In my previous [post](https://www.alexanderslotte.com/5-reasons-why-you-as-a-net-developer-should-venture-into-machine-learning-today/) I talked about some reasons why I think developers should venture into machine learning today. In this post I want to look at it from a different perspective and explore some reasons small to mid-size organizations could benefit from starting their journey. 
+
+
+
 \- Level up your development team
 
 \- New business opportunities and source of revenue
