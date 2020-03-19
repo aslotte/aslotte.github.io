@@ -1,7 +1,7 @@
 ---
 title: >-
-  5 reasons why you as a .NET Developer should venture into Machine Learning
-  today
+  5 Reasons Why You as a .NET Developer Should Get Started With Machine Learning
+  Today
 comments: true
 tags:
   - '#machinelearning #getstarted #community'
@@ -11,7 +11,7 @@ I'm fortunate enough to occasionally be invited to speak at conferences around t
 
 ## 1. Career growth and job satisfaction
 
-Who doesn't like to learn something new? Retaining top talent is all about making sure they have the space and ability to learn new things to constantly grow their capabilities. Although it's been around for a while, Machine Learning is a completely new domain, especially for the .NET Community. Picking up these skills will not only be rewarding (I promise), but it will also make you even more sought after. 
+Who doesn't like to learn something new? Retaining top talent is all about making sure they have the space and ability to learn new things, to constantly grow their capabilities. Although it's been around for a while, Machine Learning is a completely new domain, especially for the .NET Community. Picking up these skills will not only be rewarding (I promise), but it will also make you even more sought after. As developers, we are certainly in high demand today, but that may change overnight. Having more than one area of expertise safe-guards you for worse times. Furthermore, true innovation comes when you bring two unrelated things together. Ever thought about creating a startup? Well I promise you that not only will you have so many more ideas, but you'll also be empowered to act on them if you pick up machine learning.
 
 ## 2. Be a catalyst
 
