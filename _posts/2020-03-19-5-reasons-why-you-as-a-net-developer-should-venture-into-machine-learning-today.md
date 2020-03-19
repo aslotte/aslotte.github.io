@@ -1,6 +1,8 @@
 ---
 title: 5 Reasons Why You As a Developer Should Venture Into Machine Learning Today
 comments: true
+image: /images/post-images/leap.jpg
+
 tags:
   - '#machinelearning #getstarted #community'
 date: '2020-03-19 10:17 -0400'
