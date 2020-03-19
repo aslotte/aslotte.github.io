@@ -15,7 +15,7 @@ Who doesn't like to learn something new? Retaining top talent is all about makin
 
 ## 2. Be a catalyst
 
-Be the catalyst. Have an impact. Push the barrier of what's possible. If you invest your time into learning Machine Learning, you can be the one transforming and enabling your .NET team. There's nothing more inspiring than having a positive lasting impact on an organization and fellow co-workers. By better understanding in what ways you can make your application smarter, by either leveraging existing cloud services or building your own custom models, you can give sound technical advise to leadership that may shape the future of your application. 
+Be the catalyst. Have an impact. Push the barrier of what's possible. If you invest your time into learning Machine Learning, you can be the one transforming and enabling your .NET team. There's nothing more inspiring than having a positive lasting impact on an organization and fellow co-workers. By better understanding in what ways you can make your application smarter, by either leveraging existing cloud services or building your own custom models, you can provide sound technical advise to your leadership team that may shape the future of your application. Take control of your own career and be a tough leader within your organization.
 
 ## 3. You don't have to chose
 
