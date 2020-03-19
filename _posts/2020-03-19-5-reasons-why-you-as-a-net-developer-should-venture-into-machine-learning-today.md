@@ -1,7 +1,5 @@
 ---
-title: >-
-  5 Reasons Why You as a .NET Developer Should Get Started With Machine Learning
-  Today
+title: 5 Reasons Why You Should Venture Into Machine Learning Today
 comments: true
 tags:
   - '#machinelearning #getstarted #community'
