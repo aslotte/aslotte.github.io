@@ -9,6 +9,8 @@ In my previous [post](https://www.alexanderslotte.com/5-reasons-why-you-as-a-net
 
 
 
+\- Why organizations with existing .NET teams should invest in ML in .NET
+
 \- Level up your development team
 
 \- New business opportunities and source of revenue
