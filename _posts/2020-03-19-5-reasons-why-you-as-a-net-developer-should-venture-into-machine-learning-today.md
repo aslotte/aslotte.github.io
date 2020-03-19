@@ -9,6 +9,8 @@ date: '2020-03-19 10:17 -0400'
 ---
 I'm fortunate enough to occasionally be invited to speak at conferences around the world about what I'm truly passionate about. Having the opportunity to teach machine learning to groups of highly skilled .NET developers is a privilege and one of the most rewarding things I get to do. I often get questions from developers why they should invest time into learning a completely new domain, and why companies shouldn't just hire "real" Data Scientists. I wanted to take a moment to write down why I think developers in the .NET community should take an interest, a leap of faith if you will, and venture in the world of machine learning.
 
+![](/images/post-images/leap.jpg)
+
 ## 1. Career growth and job satisfaction
 
 Who doesn't like to learn something new? Retaining top talent is all about making sure they have the space and ability to learn new things, to constantly grow their capabilities. Although it's been around for a while, Machine Learning is a completely new domain, especially for the .NET Community. Picking up these skills will not only be rewarding (I promise), but it will also make you even more sought after. As developers, we are certainly in high demand today, but that may change overnight. Having more than one area of expertise safe-guards you for worse times. Furthermore, true innovation comes when you bring two unrelated things together. Ever thought about creating a startup? Well I promise you that not only will you have so many more ideas, but you'll also be empowered to act on them if you pick up machine learning.
