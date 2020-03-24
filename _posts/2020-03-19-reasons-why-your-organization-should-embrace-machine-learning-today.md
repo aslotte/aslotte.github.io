@@ -9,6 +9,14 @@ In my previous [post](https://www.alexanderslotte.com/5-reasons-why-you-as-a-net
 
 
 
+\- Machine Learning is different from Software Development
+
+\- You already have the knowledge in-house at the tip of your hand
+
+\- Strategic advantage and new sources of revenue
+
+
+
 \- Why organizations with existing .NET teams should invest in ML in .NET
 
 \- Level up your development team
