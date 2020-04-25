@@ -7,6 +7,7 @@ author_profile: true
 ## Conference Talks
 
 <figure class="third">
+<iframe width="1000" height="480" src="https://www.youtube.com/embed/onxRLTc2SaA" frameborder="1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <iframe width="1000" height="480" src="https://www.youtube.com/embed/dojO4zEL9sg" frameborder="1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <iframe width="1000" height="480" src="https://www.youtube.com/embed/v120B28x9ag" frameborder="1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <br/>
@@ -15,8 +16,9 @@ author_profile: true
 
 ## Twitch/Youtube
 <figure class="third">
-<iframe width="1000" height="480" src="https://www.youtube.com/embed/jvLoURhAa8Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<iframe width="1000" height="480" src="https://www.youtube.com/embed/RZoQ4827vUA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="1000" height="480" src="https://www.youtube.com/embed/ns3b_Y7qJu0" frameborder="1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="1000" height="480" src="https://www.youtube.com/embed/jvLoURhAa8Q" frameborder="1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="1000" height="480" src="https://www.youtube.com/embed/RZoQ4827vUA" frameborder="1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <iframe width="1000" height="480" src="https://www.youtube.com/embed/u9xWOPxWboI" frameborder="1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <iframe width="1000" height="480" src="https://www.youtube.com/embed/y7yeKW_ifg8" frameborder="1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <iframe width="1000" height="480" src="https://www.youtube.com/embed/dNd-Qt8c_sI" frameborder="1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
