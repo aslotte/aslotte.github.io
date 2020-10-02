@@ -42,8 +42,8 @@ We need to:
 #### ASP.NET Core Web App Template
 That's a lot of steps just to get a model deployed as a container, especially if you would have to do it yourself. Fortunately for us .NET is excellent at helping us achieve this. To auto-generate an ASP.NET Core Web App customized for serving ML.NET models we can use `dotnet new` templates. In particular for this specific instance I've created a new GitHub repo just for ML.NET `dotnet new` templates (called \[ML.NET.Templates](https://github.com/aslotte/ML.NET.Templates)) that can be used either for MLOps or anytime you need a template to train a model or deploy a model. 
 
-#### Decompiling run-time instances of the model input and output schema
-So how about **decompiling** run-time instances of the model's input and output? Well let's first take look at how we expect to serve predictions through an ASP.NET Core Web App in our Docker container
+#### Decompiling run-time instances of the model's input and output
+So how about decompiling run-time instances of the model's input and output? Well let's first take look at how we expect to serve predictions through an ASP.NET Core Web App in our Docker container
 
 ```
         [HttpPost]
