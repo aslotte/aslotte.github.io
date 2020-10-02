@@ -29,6 +29,10 @@ So what is new in v1.2? From the start, the goal of v1.2 was to support containe
 
 Before we look at how we can utilize MLOps.NET to deploy an ML.NET model to Kubernetes, let's take a step back and think about what steps needs to be taken to make that happen.
 
+
+
+We need to:
+
 \- Auto-generate an ASP.NET Core Web App to serve the ML.NET model
 
 \- Decompile run-time instances of the models input and output schema and include that as part of the ASP.NET Core Web App
