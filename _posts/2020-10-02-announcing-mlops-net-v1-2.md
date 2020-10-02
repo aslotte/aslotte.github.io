@@ -15,11 +15,13 @@ As a response to the lack of MLOps tooling for ML.NET, the journey to develop ML
 
 Previous releases of the library have added support for a multitude of use cases such as experiment tracking, logging hyper parameters and data as well as deploying a model to a Uri endpoint so that e.g. an ASP.NET Core application may consume the trained and deployed model. 
 
-MLOps.NET is highly configurable and allows a user of the library to store their metadata about a model either on a SQLite, SQL Server or Cosmos database. The tool furthermore implements a versioned model repository that can be backed by either Azure Blob Storage, AWS S3 or a local fileshare. 
+MLOps.NET is highly configurable and allows a user of the library to store their metadata about a model either on a SQLite, SQL Server or Cosmos database. The tool furthermore implements a versioned model repository that can be backed by either Azure Blob Storage, AWS S3 or a local file share. 
 
 
 
 \## What is new in v1.2
+
+So what is new in v1.2? From the start, the goal of v1.2 was to support containerized model deployment of ML.NET models to a Kubernetes cluster. 
 
 
 
