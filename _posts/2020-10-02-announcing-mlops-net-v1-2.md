@@ -21,7 +21,7 @@ MLOps.NET is highly configurable and allows a user of the library to store their
 
 \## What is new in v1.2
 
-So what is new in v1.2? From the start, the goal of v1.2 was to support containerized model deployment of ML.NET models to a Kubernetes cluster. 
+So what is new in v1.2? From the start, the goal of v1.2 was to support containerized model deployment of ML.NET models to a Kubernetes cluster, ideally with one line of code. There were a lot of moving parts that needed to come together to make this happen. Let's dive into it! 
 
 
 
