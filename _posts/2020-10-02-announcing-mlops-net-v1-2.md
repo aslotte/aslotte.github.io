@@ -62,4 +62,4 @@ Copying the trained model and the schema is not enough to complete a fully funct
 With the final puzzle piece in place building a basic Docker image for the ASP.NET Core Web App is pretty straightforward. The image is then pushed to a configurable private or public image repository, which we will see examples of later.
 
 #### Deploying the image to a Kubernetes cluster
-
+Deploying a model to a Kubernetes cluster in the form of container image is a fantastic way to ensure performance, resilience and availability among other things. In v1.2 of MLOps, the library deploys the trained model as a replica set of one and exposes the model via an ingress load balancer. For simplicity’s sake it deploys the service and pod to a new namespace named `{experimentName-deploymentTargetName}'. This will allow models currently being tested and models in production to be separated, which allows for the possibility to apply different access and resource requirements as needed. 
