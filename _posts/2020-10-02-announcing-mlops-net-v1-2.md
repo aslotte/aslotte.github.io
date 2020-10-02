@@ -26,3 +26,21 @@ So what is new in v1.2? From the start, the goal of v1.2 was to support containe
 
 
 \### Containerized Model Deployment to Kubernetes
+
+Before we look at how we can utilize MLOps.NET to deploy an ML.NET model to Kubernetes, let's take a step back and think about what steps needs to be taken to make that happen.
+
+\- Auto-generate an ASP.NET Core Web App to serve the ML.NET model
+
+\- Decompile run-time instances of the models input and output schema and include that as part of the ASP.NET Core Web App
+
+\- Automatically detect any used package references so that they can be added to the ASP.NET Core Web App
+
+\- Download and include a registered model from a given model repository
+
+\- Build a complete Docker image
+
+\- Push the built Docker image to a private or public container registry either on-premise or in the cloud
+
+\- Connect to and create a Kubernetes namespace to deploy services to
+
+\- Create parameterized Kubernetes manifest files to deploy the built Docker image to a Pod in a replica set exposed to the world on an external IP address through a load balancer ingress
