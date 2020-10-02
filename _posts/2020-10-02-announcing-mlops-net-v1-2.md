@@ -43,4 +43,8 @@ Before we look at how we can utilize MLOps.NET to deploy an ML.NET model to Kube
 
 \- Connect to and create a Kubernetes namespace to deploy services to
 
-\- Create parameterized Kubernetes manifest files to deploy the built Docker image to a Pod in a replica set exposed to the world on an external IP address through a load balancer ingress
+\- Create a secret in the Kubernetes cluster for any needed image pull secrets
+
+\- Create parameterized Kubernetes manifest files to deploy the built Docker image to a Pod in a replica set exposed to the world through an external IP address via a load balancer ingress 
+
+\- Persist and return the URL to which a user can access the deploy service
