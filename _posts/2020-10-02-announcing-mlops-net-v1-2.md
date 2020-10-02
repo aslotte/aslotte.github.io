@@ -39,8 +39,10 @@ We need to:
 * Apply the Kubernetes manifest files to the cluster in a namespace specific to an experiment and deployment target (e.g. stage vs prod)
 * Persist and return the URL to which a user can access the deployed service
 
+#### ASP.NET Core Web App Template
 That's a lot of steps just to get a model deployed as a container, especially if you would have to do it yourself. Fortunately for us .NET is excellent at helping us achieve this. To auto-generate an ASP.NET Core Web App customized for serving ML.NET models we can use `dotnet new` templates. In particular for this specific instance I've created a new GitHub repo just for ML.NET `dotnet new` templates (called \[ML.NET.Templates](https://github.com/aslotte/ML.NET.Templates)) that can be used either for MLOps or anytime you need a template to train a model or deploy a model. 
 
+#### Decompiling run-time instances of the model input and output schema
 So how about **decompiling** run-time instances of the model's input and output? Well let's first take look at how we expect to serve predictions through an ASP.NET Core Web App in our Docker container
 
 ```
@@ -53,6 +55,11 @@ So how about **decompiling** run-time instances of the model's input and output?
 
 As we can see, the JSON payload will be of type `ModelInput` and the endpoint it will return a `ModelOutput`. Given that we need to ensure that the 'ModelInput` and `ModelOutput` matches that of which the model has been trained on. To achieve this we can use [ILSpy](https://github.com/icsharpcode/ILSpy) to decompile a run-time instance and include that as a class in the Web App.
 
+#### Detecting and installing package dependencies
 Copying the trained model and the schema is not enough to complete a fully functioning ASP.NET Core Web App that can serve various types of ML.NET models. ML.NET consists of a flora of packages ranging from `Microsoft.ML.FastTree` for decision trees to `Microsoft.ML.ImageAnalytics` for image support, and we need to ensure that the correct dependencies are included. My first thought to achieve this was to scan the loaded AppDomain for all and any `Microsoft.ML` assemblies, but that quickly proved to be a rabbit hole given that not all dependencies are loaded until they are used and the list would also include a lot of sub-dependencies not listed as NuGet packages. The way MLOps.NET solves this problem is by reading the `deps.json` file provided by the .NET Core compiled application and from there determining what the dependency graphs looks like.
 
-With the final puzzle piece in place building a basic Docker image for the ASP.NET Core Web App is pretty much straightforward. The image is then pushed to a configured private or public image repository. 
+#### Building and pushing a Docker image
+With the final puzzle piece in place building a basic Docker image for the ASP.NET Core Web App is pretty straightforward. The image is then pushed to a configurable private or public image repository, which we will see examples of later.
+
+#### Deploying the image to a Kubernetes cluster
+
