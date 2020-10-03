@@ -72,19 +72,19 @@ This all sounds amazing, so how do we make it happen? To deploy an ML.NET model 
 We need to provide the name and credentials to a container registry and the content or path to a Kubernetes kubeconfig. If you want to push you image to a public image registry, you only need to provide the registry name. 
 
 ```
-            IMLOpsContext mlOpsContext = new MLOpsBuilder()
-                .UseLocalFileModelRepository()
-                .UseSQLite()
-                .UseContainerRegistry("RegistryName", "UserName", "Password")
-                .UseKubernetes("kubeConfigPathOrContent")
-                .Build();
+IMLOpsContext mlOpsContext = new MLOpsBuilder()
+    .UseLocalFileModelRepository()
+    .UseSQLite()
+    .UseContainerRegistry("RegistryName", "UserName", "Password")
+    .UseKubernetes("kubeConfigPathOrContent")
+    .Build();
 ```
 
 ### 2. Deploy a registered model to a Kubernetes Cluster
 The method `DeployModelToKubernetesAsync` exists on the `Deployment` catalog and takes two generic types as input for the model input and output. The user will also need to provide a registered model and a deployment target, which you can read more about how to create on the libraries Readme page.
 
 ```
-var deployment = await sut.Deployment.DeployModelToKubernetesAsync<ModelInput, ModelOutput>(deploymentTarget, registeredModel, "deployedBy");
+    var deployment = await sut.Deployment.DeployModelToKubernetesAsync<ModelInput,   ModelOutput>(deploymentTarget, registeredModel, "deployedBy");
 
     //e.g. http://20.62.210.236/api/Prediction
     var uri = deployment.DeploymentUri;
@@ -93,7 +93,7 @@ var deployment = await sut.Deployment.DeployModelToKubernetesAsync<ModelInput, M
 
 If you do not want to provide the schema at deployment time, there's also an option to register the schema during the run, and at deployment time use a method overload without the generic arguments 
 ```
-var deployment = await sut.Deployment.DeployModelToKubernetesAsync(deploymentTarget, registeredModel, "deployedBy");
+    var deployment = await sut.Deployment.DeployModelToKubernetesAsync(deploymentTarget, registeredModel, "deployedBy");
 
     //e.g. http://20.62.210.236/api/Prediction
     var uri = deployment.DeploymentUri;
