@@ -64,3 +64,38 @@ With the final puzzle piece in place building a basic Docker image for the ASP.N
 #### Deploying the image to a Kubernetes cluster
 Deploying a model to a Kubernetes cluster in the form of container image is a fantastic way to ensure performance, resilience and availability among other things. In v1.2 of MLOps, the library deploys the trained model as a replica set of one and exposes the model via an ingress load balancer. For simplicity’s sake it deploys the service and pod to a new namespace named `{experimentName-deploymentTargetName}'. This will allow models currently being tested and models in production to be separated, which allows for the possibility to apply different access and resource requirements as needed. Future releases of MLOps.NET will open up the possibility to configure various types of deployment settings, such as type of load balancer, number of replicas and minimum amount of resources to be allocated.
 
+## Show me the code
+This all sounds amazing, so how do we make it happen? To deploy an ML.NET model to a Kubernetes cluster, two things need to happen. 
+
+### 1. Configure the use of a Container Registry and a Kubernetes Cluster
+
+We need to provide the name and credentials to a container registry and the content or path to a Kubernetes kubeconfig. If you want to push you image to a public image registry, you only need to provide the registry name. 
+
+```
+            IMLOpsContext mlOpsContext = new MLOpsBuilder()
+                .UseLocalFileModelRepository()
+                .UseSQLite()
+                .UseContainerRegistry("RegistryName", "UserName", "Password")
+                .UseKubernetes("kubeConfigPathOrContent")
+                .Build();
+```
+
+### 2. Deploy a registered model to a Kubernetes Cluster
+The method `DeployModelToKubernetesAsync` exists on the `Deployment` catalog and takes two generic types as input for the model input and output. The user will also need to provide a registered model and a deployment target, which you can read more about how to create on the libraries Readme page.
+
+```
+var deployment = await sut.Deployment.DeployModelToKubernetesAsync<ModelInput, ModelOutput>(deploymentTarget, registeredModel, "deployedBy");
+
+    //e.g. http://20.62.210.236/api/Prediction
+    var uri = deployment.DeploymentUri;
+
+```
+
+If you do not want to provide the schema at deployment time, there's also an option to register the schema during the run, and at deployment time use a method overload without the generic arguments 
+```
+var deployment = await sut.Deployment.DeployModelToKubernetesAsync(deploymentTarget, registeredModel, "deployedBy");
+
+    //e.g. http://20.62.210.236/api/Prediction
+    var uri = deployment.DeploymentUri;
+```
+
