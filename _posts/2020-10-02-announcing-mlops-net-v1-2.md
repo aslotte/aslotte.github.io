@@ -46,11 +46,11 @@ That's a lot of steps just to get a model deployed as a container, especially if
 So how about decompiling run-time instances of the model's input and output? Well let's first take look at how we expect to serve predictions through an ASP.NET Core Web App in our Docker container
 
 ```csharp
-        [HttpPost]
-        public ModelOutput Predict(ModelInput modelInput)
-        {
-            return this.predictionEnginePool.Predict(modelInput);
-        }
+[HttpPost]
+public ModelOutput Predict(ModelInput modelInput)
+{
+    return this.predictionEnginePool.Predict(modelInput);
+}
 ```
 
 As we can see, the JSON payload will be of type `ModelInput` and the endpoint it will return a `ModelOutput`. Given that we need to ensure that the 'ModelInput` and `ModelOutput` matches that of which the model has been trained on. To achieve this we can use [ILSpy](https://github.com/icsharpcode/ILSpy) to decompile a run-time instance and include that as a class in the Web App.
