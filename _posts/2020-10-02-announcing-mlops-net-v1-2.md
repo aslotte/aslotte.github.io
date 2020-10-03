@@ -99,3 +99,5 @@ var deployment = await sut.Deployment.DeployModelToKubernetesAsync(deploymentTar
     var uri = deployment.DeploymentUri;
 ```
 
+## Wrapping up
+There's a lot to uncover with v1.2 of MLOps.NET, and there're more features added than just the Kubernetes support. My hope is that you'll find this tool useful in your journey towards more reliably deploying machine learning models to production. Should you have any thoughts, ideas or feedback on the tool, please reach out or open an issue on the repo, that would be most welcomed.
