@@ -45,11 +45,11 @@ We need to:
 
 That is a lot of steps just to get a model deployed as a container, especially if you would have to do it manually. Let us explore how MLOps.NET solves this.
 
-#### ASP.NET Core Web App Template
+### ASP.NET Core Web App Template
 
 To auto-generate an ASP.NET Core Web App that is customized to serve ML.NET models via a RESTful endpoint, we can use a `dotnet new` template. There were currently no ML.NET specific templates when I set out to do this, so we went ahead and created a new repo containing an assortment of [templates](https://github.com/aslotte/ML.NET.Templates) that can be used either for MLOps.NET or anytime you need a template to train or deploy a mode. 
 
-#### Decompiling run-time instances of the model's input and output
+### Decompiling run-time instances of the model's input and output
 
 How can we ensure that the RESTful endpoint we will use to make predictions can accept and return the same model schema that the model was trained on?
 
