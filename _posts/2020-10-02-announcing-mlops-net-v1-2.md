@@ -3,7 +3,7 @@ title: Announcing MLOps.NET v1.2
 comments: true
 image: /images/post-images/wheels.jpg
 tags:
-  - mlnet mlops machinelearning
+  - '#mlnet #mlops #machinelearning'
 date: 2020-10-04 08:16 -0400
 ---
 
@@ -72,7 +72,7 @@ With the final puzzle piece in place building a basic Docker image for the ASP.N
 
 #### Deploying the image to a Kubernetes cluster
 
-Deploying a model to a Kubernetes cluster in the form of container image is a fantastic way to ensure performance, resilience and availability of a machine learning model. In v1.2 of MLOps.NET, the library will deploy the trained model as a replica set of one pod and expose the model to the world via an ingress load balancer. For simplicity’s sake it deploys the service and pod to a new namespace called `{experimentName-deploymentTargetName}'. This will allow models currently being tested and models in production to be separated, which allows for the possibility to apply different access and resource requirements as needed. Future releases of MLOps.NET will open up the possibility to configure various types of deployment settings, such as the type of load balancer, number of replicas and minimum amount of resources to be allocated.
+Deploying a model to a Kubernetes cluster in the form of container image is a fantastic way to ensure performance, resilience and availability of a machine learning model. In v1.2 of MLOps.NET, the library will deploy the trained model as a replica set of one pod and expose the model to the world via an ingress load balancer. For simplicity’s sake it deploys the service and pod to a new namespace called `{experimentName-deploymentTargetName}`. This will allow models currently being tested and models in production to be separated, which allows for the possibility to apply different access and resource requirements as needed. Future releases of MLOps.NET will open up the possibility to configure various types of deployment settings, such as the type of load balancer, number of replicas and minimum amount of resources to be allocated.
 
 ## Show me the code
 
