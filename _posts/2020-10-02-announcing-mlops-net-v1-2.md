@@ -61,7 +61,7 @@ public ModelOutput Predict(ModelInput modelInput)
 }
 ```
 
-As we can see, the JSON payload will be of type `ModelInput` and it will return a `ModelOutput`. Given that we need to ensure that the 'ModelInput`and`ModelOutput` matches that of which the model has been trained on. If they do not, we will get run-time errors as we try to make predictions. To achieve this we can use [ILSpy](https://github.com/icsharpcode/ILSpy) to decompile a run-time instance and include that as a class in the Web App. It is possible to either register the schema beforehand during the run, or pass the run-time instances in to the deployment method and MLOps.NET will do this decompilation on the fly.
+As we can see, the JSON payload will be of type `ModelInput` and it will return a `ModelOutput`. Given that we need to ensure that the `ModelInput` and `ModelOutput` matches that of which the model has been trained on. If they do not, we will get run-time errors as we try to make predictions. To achieve this we can use [ILSpy](https://github.com/icsharpcode/ILSpy) to decompile a run-time instance and include that as a class in the Web App. It is possible to either register the schema beforehand during the run, or pass the run-time instances in to the deployment method and MLOps.NET will do this decompilation on the fly.
 
 #### Detecting and installing package dependencies
 
