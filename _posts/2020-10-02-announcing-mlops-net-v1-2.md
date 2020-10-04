@@ -65,16 +65,26 @@ In addition to the model schema, we will also need to copy over the physical mod
 With the final puzzle piece in place building a basic Docker image for the ASP.NET Core Web App is pretty straightforward. The image is then pushed to a configurable private or public image repository, which we will see examples of later.
 
 #### Deploying the image to a Kubernetes cluster
-
-Deploying a model to a Kubernetes cluster in the form of container image is a fantastic way to ensure performance, resilience and availability among other things. In v1.2 of MLOps, the library deploys the trained model as a replica set of one and exposes the model via an ingress load balancer. For simplicity’s sake it deploys the service and pod to a new namespace named `{experimentName-deploymentTargetName}'. This will allow models currently being tested and models in production to be separated, which allows for the possibility to apply different access and resource requirements as needed. Future releases of MLOps.NET will open up the possibility to configure various types of deployment settings, such as type of load balancer, number of replicas and minimum amount of resources to be allocated.
+Deploying a model to a Kubernetes cluster in the form of container image is a fantastic way to ensure performance, resilience and availability of a machine learning model. In v1.2 of MLOps.NET, the library will deploy the trained model as a replica set of one pod and expose the model to the world via an ingress load balancer. For simplicity’s sake it deploys the service and pod to a new namespace called `{experimentName-deploymentTargetName}'. This will allow models currently being tested and models in production to be separated, which allows for the possibility to apply different access and resource requirements as needed. Future releases of MLOps.NET will open up the possibility to configure various types of deployment settings, such as the type of load balancer, number of replicas and minimum amount of resources to be allocated.
 
 ## Show me the code
-
 This all sounds amazing, so how do we make it happen? To deploy an ML.NET model to a Kubernetes cluster, two things need to happen. 
 
 ### 1. Configure the use of a Container Registry and a Kubernetes Cluster
+We need to provide the name and credentials to a container registry and the content or path to a Kubernetes kubeconfig. If you want to push an image to a public image registry, you only need to provide the registry name. 
 
-We need to provide the name and credentials to a container registry and the content or path to a Kubernetes kubeconfig. If you want to push you image to a public image registry, you only need to provide the registry name. 
+There are different ways of getting the credentials depending on if you host your container registry and Kubernetes cluster locally or in Azure or AWS. If you host them in Azure, you can get the Azure Container Registry credentials by running
+
+```
+az acr credential show --name {nameOfContainerRegistry}
+```
+
+Similarly, you can get the kubeconfig to your Azure Kubernetes Service by running
+```
+az aks get-credentials --resource-group {resourceGroupName} --name {serviceName} --file kubeconfig
+```
+
+To configure MLOps.NET, use the MLOpsBuilder
 
 ```csharp
 IMLOpsContext mlOpsContext = new MLOpsBuilder()
@@ -87,7 +97,10 @@ IMLOpsContext mlOpsContext = new MLOpsBuilder()
 
 ### 2. Deploy a registered model to a Kubernetes Cluster
 
-The method `DeployModelToKubernetesAsync` exists on the `Deployment` catalog and takes two generic types as input for the model input and output. The user will also need to provide a registered model and a deployment target, which you can read more about how to create on the libraries Readme page.
+The method `DeployModelToKubernetesAsync` exists on the `Deployment` catalog and takes two generic types as parameters for the model input and output. The user will also need to provide a registered model and a deployment target, which you can read more about how to create on the libraries GitHub Readme page.
+
+If you do not want to provide the schema at deployment, there is also an option to register the schema during the run and at deployment use a method overload without the generic arguments. 
+
 
 ```csharp
     var deployment = await sut.Deployment.DeployModelToKubernetesAsync<ModelInput,   ModelOutput>(deploymentTarget, registeredModel, "deployedBy");
@@ -106,7 +119,6 @@ If you do not want to provide the schema at deployment time, there's also an opt
 ```
 
 ## Wrapping up
+There is a lot to uncover with MLOps.NET v1.2, and there are more features added than just the Kubernetes support. My hope is that you will find this tool useful in your journey towards more reliable deployment of machine learning models to production. Should you have any thoughts, ideas or feedback on the tool is always welcome, please reach out or open an issue on the GitHub repo.
 
-There's a lot to uncover with v1.2 of MLOps.NET, and there're more features added than just the Kubernetes support. My hope is that you'll find this tool useful in your journey towards more reliably deploying machine learning models to production. Should you have any thoughts, ideas or feedback on the tool, please reach out or open an issue on the repo, that would be most welcomed.
-
-Happy coding!
+Happy coding
