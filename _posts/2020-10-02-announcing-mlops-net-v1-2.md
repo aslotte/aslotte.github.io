@@ -1,13 +1,15 @@
 ---
 title: Announcing MLOps.NET v1.2
 comments: true
+image: /images/post-images/wheels.jpg
 tags:
   - mlnet mlops machinelearning
-date: 2020-10-02 08:16 -0400
+date: 2020-10-04 08:16 -0400
 ---
-![](/images/post-images/pexels-digital-buggu-171198.jpg)
 
 It is with great pleasure I announce the release of MLOps.NET v1.2! The library has come a long way since the first code file was committed in May. With each submitted PR, we inch forward towards a complete end-to-end MLOps solution for ML.NET
+
+![](/images/post-images/wheels.jpg)
 
 ## What is MLOps.NET?
 
