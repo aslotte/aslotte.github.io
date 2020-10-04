@@ -3,22 +3,23 @@ title: Announcing MLOps.NET v1.2
 comments: true
 image: /images/post-images/wheels.jpg
 tags:
-  - '#mlnet #mlops #machinelearning'
+  - "#mlnet #mlops #machinelearning"
 date: 2020-10-04 08:16 -0400
 ---
-
 It is with great pleasure I announce the release of MLOps.NET v1.2! The library has come a long way since the first code file was committed in May. With each submitted PR, we inch forward towards a complete end-to-end MLOps solution for ML.NET
 
 ![](/images/post-images/wheels.jpg)
 
 ## What is MLOps.NET?
 
-MLOps.NET is a data science tool designed to manage and handle the machine learning lifecycle for a model trained in ML.NET. MLOps as a practice has over the last year quickly emerged as a vital instrument to successfully deploy machine learning models to production, while keeping track of how they were trained, what data they were trained on and much more.
+[MLOps.NET](https://github.com/aslotte/MLOps.NET) is a data science tool designed to manage and handle the machine learning lifecycle for a model trained in ML.NET. MLOps as a practice has over the last year quickly emerged as a vital instrument to successfully deploy machine learning models to production, while keeping track of how they were trained, what data they were trained on and much more.
 In response to the lack of MLOps tooling for ML.NET, the journey to develop MLOps.NET was embarked with the vision that it would seamlessly support managing, tracking and deploying ML.NET models.
 
 Previous releases of the library have added support for a multitude of use cases such as experiment tracking, logging hyper parameters and data, as well as deploying a model to a Uri endpoint so that, for example, an ASP.NET Core application may consume the trained and deployed model. 
 
 MLOps.NET is highly configurable and allows the user of the library to store their metadata about a model either on an SQLite, SQL Server or Cosmos database. Furthermore, the tool implements a versioned model repository that can be backed by either Azure Blob Storage, AWS S3 or a local file share. 
+
+To can download the library from [NuGet](https://www.nuget.org/packages/MLOps.NET/)
 
 ## What is new in v1.2
 
