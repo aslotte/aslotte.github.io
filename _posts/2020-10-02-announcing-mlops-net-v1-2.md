@@ -1,12 +1,12 @@
 ---
-title: Announcing MLOps.NET v1.2
+title: Announcing MLOps.NET v1.2.0
 comments: true
 image: /images/post-images/wheels.jpg
 tags:
   - "#mlnet #mlops #machinelearning"
 date: 2020-10-04 08:16 -0400
 ---
-It is with great pleasure I announce the release of MLOps.NET v1.2! The library has come a long way since the first code file was committed in May. With each submitted PR, we inch forward towards a complete end-to-end MLOps solution for ML.NET
+It is with great pleasure I announce the release of MLOps.NET v1.2.0! The library has come a long way since the first code file was committed in May. With each submitted PR, we inch forward towards a complete end-to-end MLOps solution for ML.NET
 
 ![](/images/post-images/wheels.jpg)
 
@@ -21,9 +21,9 @@ MLOps.NET is highly configurable and allows the user of the library to store the
 
 To can download the library from [NuGet](https://www.nuget.org/packages/MLOps.NET/)
 
-## What is new in v1.2
+## What is new in v1.2.0
 
-So, what is new in v1.2? From the start, the goal of v1.2 was to support containerized model deployment of ML.NET models to a Kubernetes cluster, ideally with one line of code. There were a lot of moving parts that needed to come together to make this happen. Let us dive into it! 
+So, what is new in v1.2.0? From the start, the goal of v1.2.0 was to support containerized model deployment of ML.NET models to a Kubernetes cluster, ideally with one line of code. There were a lot of moving parts that needed to come together to make this happen. Let us dive into it! 
 
 ### Containerized Model Deployment to Kubernetes
 
@@ -73,7 +73,7 @@ With the final puzzle piece in place building a basic Docker image for the ASP.N
 
 #### Deploying the image to a Kubernetes cluster
 
-Deploying a model to a Kubernetes cluster in the form of container image is a fantastic way to ensure performance, resilience and availability of a machine learning model. In v1.2 of MLOps.NET, the library will deploy the trained model as a replica set of one pod and expose the model to the world via an ingress load balancer. For simplicity’s sake it deploys the service and pod to a new namespace called `{experimentName-deploymentTargetName}`. This will allow models currently being tested and models in production to be separated, which allows for the possibility to apply different access and resource requirements as needed. Future releases of MLOps.NET will open up the possibility to configure various types of deployment settings, such as the type of load balancer, number of replicas and minimum amount of resources to be allocated.
+Deploying a model to a Kubernetes cluster in the form of container image is a fantastic way to ensure performance, resilience and availability of a machine learning model. In v1.2.0 of MLOps.NET, the library will deploy the trained model as a replica set of one pod and expose the model to the world via an ingress load balancer. For simplicity’s sake it deploys the service and pod to a new namespace called `{experimentName-deploymentTargetName}`. This will allow models currently being tested and models in production to be separated, which allows for the possibility to apply different access and resource requirements as needed. Future releases of MLOps.NET will open up the possibility to configure various types of deployment settings, such as the type of load balancer, number of replicas and minimum amount of resources to be allocated.
 
 ## Show me the code
 
@@ -130,6 +130,6 @@ If you do not want to provide the schema at deployment time, there's also an opt
 
 ## Wrapping up
 
-There is a lot to uncover with MLOps.NET v1.2, and there are more features added than just the Kubernetes support. My hope is that you will find this tool useful in your journey towards more reliable deployment of machine learning models to production. Should you have any thoughts, ideas or feedback on the tool is always welcome, please reach out or open an issue on the GitHub repo.
+There is a lot to uncover with MLOps.NET v1.2.0, and there are more features added than just the Kubernetes support. My hope is that you will find this tool useful in your journey towards more reliable deployment of machine learning models to production. Should you have any thoughts, ideas or feedback on the tool is always welcome, please reach out or open an issue on the GitHub repo.
 
 Happy coding
