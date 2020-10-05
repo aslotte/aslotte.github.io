@@ -1,6 +1,7 @@
 ---
 title: Get started with MLOps.NET
 comments: true
+image: /images/post-images/pexels-snapwire-618612-1-.jpg
 tags:
   - mlops mlops.net
 date: 2020-10-05 09:49 -0400
