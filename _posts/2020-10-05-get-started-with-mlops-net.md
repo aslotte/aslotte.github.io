@@ -7,7 +7,7 @@ date: 2020-10-05 09:49 -0400
 ---
 In this upcoming series I want to dive into the world of MLOps and [MLOps.NET](https://github.com/aslotte/MLOps.NET), and explore how MLOps.NET can help you set your organization up for success by managing and automating the machine learning life-cycle. 
 
-![](/images/post-images/pexels-breakingpic-2923.jpg)
+![](/images/post-images/pexels-snapwire-618612-1-.jpg)
 
 ## What is MLOps
 
