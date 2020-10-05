@@ -23,9 +23,9 @@ So if there're already a number of great tools out there, why do we need MLOps.N
 
 To get started with [MLOps.NET](https://github.com/aslotte/MLOps.NET), there're two fundamental concepts one should know. The **storage provider** one should provision for the model's metadata and the provider for the **versioned model repository** in which we'll store our trained and deployed models. 
 
-MLOps.NET to date currently supports using a SQLite, SQL Server or a Cosmos DB as your storage provider for metadata, and an Azure Blob Storage, AWS S3 or a local file share for the versioned model repository. 
+MLOps.NET to date currently supports using a SQLite, SQL Server or a Cosmos DB as our storage provider for metadata, and an Azure Blob Storage, AWS S3 or a local file share for the versioned model repository. 
 
-The design of MLOps.NET mimics in large parts that of ML.NET, but instead of being centered around a `MLContext`, we use an `MLOpsContext`. The `MLOpsContext` can be configured using an `MLOpsBuilder`.
+The design of MLOps.NET mimics in large parts of that of ML.NET, but instead of being centered around a `MLContext`, we use a `MLOpsContext`. The `MLOpsContext` can be configured using an `MLOpsBuilder`.
 
 If you for example would like to use a Cosmos Db for your metadata and an Azure Blob Storage for your model repository, building a `MLOpsContext` would look something like this
 
@@ -51,4 +51,4 @@ As you can image there are many more combinations, and you are free to configure
 
 ### Wrapping up
 
-I have in this article introduced MLOps and MLOps.NET, and we've had a chance to look at how we can configure the `MLOpsContext`. In some upcoming posts we'll dive into experiment tracking, logging training runs and much more!
+I have in this brief article introduced MLOps and MLOps.NET, and we've had a chance to look at how we can configure the `MLOpsContext`. In some upcoming posts we'll dive into experiment tracking, logging training runs and much more!
