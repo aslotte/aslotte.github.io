@@ -15,7 +15,7 @@ MLOps have over the last year quickly emerged as a vital instrument in managing 
 
 ## Why do we need MLOps.NET?
 
-As MLOps have become increasingly, the number of tools to use has quickly grown. One of the more popular MLOps tools out there today is Databrick's MLflow, but Azure Machine Learning, AWS Sagemaker or Kubeflow are not far behind. 
+As MLOps have become increasingly, the number of tools to use have quickly grown. One of the more popular MLOps tools out there today is Databrick's MLflow, but Azure Machine Learning, AWS Sagemaker or Kubeflow are not far behind. 
 
 So if there're already a number of great tools out there, why do we need MLOps.NET? All the tooling to date only support models built in Python or R, using libraries such as Scikitlearn, PyTorch or Tensorflow. Although it's possible to use some existing tooling to track e.g. run metrics, none of the support ML.NET model deployments, and none of the integrates natively with an ML.NET model. 
 
