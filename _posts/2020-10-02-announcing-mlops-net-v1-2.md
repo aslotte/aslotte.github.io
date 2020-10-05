@@ -19,7 +19,7 @@ Previous releases of the library have added support for a multitude of use cases
 
 MLOps.NET is highly configurable and allows the user of the library to store their metadata about a model either on an SQLite, SQL Server or Cosmos database. Furthermore, the tool implements a versioned model repository that can be backed by either Azure Blob Storage, AWS S3 or a local file share. 
 
-To can download the library from [NuGet](https://www.nuget.org/packages/MLOps.NET/)
+You can download the library from [NuGet](https://www.nuget.org/packages/MLOps.NET/)
 
 ## What is new in v1.2.0
 
@@ -63,15 +63,15 @@ public ModelOutput Predict(ModelInput modelInput)
 
 As we can see, the JSON payload will be of type `ModelInput` and it will return a `ModelOutput`. Given that we need to ensure that the `ModelInput` and `ModelOutput` matches that of which the model has been trained on. If they do not, we will get run-time errors as we try to make predictions. To achieve this we can use [ILSpy](https://github.com/icsharpcode/ILSpy) to decompile a run-time instance and include that as a class in the Web App. It is possible to either register the schema beforehand during the run, or pass the run-time instances in to the deployment method and MLOps.NET will do this decompilation on the fly.
 
-#### Detecting and installing package dependencies
+### Detecting and installing package dependencies
 
 In addition to the model schema, we will also need to copy over the physical model to make sure it is available for the application. However, in addition we also need to make sure that all required package dependencies are installed. ML.NET consists of a flora of packages ranging from `Microsoft.ML.FastTree` for decision trees to `Microsoft.ML.ImageAnalytics` for image support, and we need to ensure that the correct dependencies are included, or else we will see run-time exceptions. My first thought to achieve this was to scan the loaded AppDomain for all and any Microsoft.ML assemblies, but that quickly proved to be a rabbit hole given that not all dependencies are loaded until they are used, and the list would also include a lot of sub-dependencies not listed as NuGet packages. The way MLOps.NET solves this problem is by reading the `deps.json` file provided by the compiled application and based on that determining what the dependency graphs looks like.
 
-#### Building and pushing a Docker image
+### Building and pushing a Docker image
 
 With the final puzzle piece in place building a basic Docker image for the ASP.NET Core Web App is pretty straightforward. The image is then pushed to a configurable private or public image repository, which we will see examples of later.
 
-#### Deploying the image to a Kubernetes cluster
+### Deploying the image to a Kubernetes cluster
 
 Deploying a model to a Kubernetes cluster in the form of container image is a fantastic way to ensure performance, resilience and availability of a machine learning model. In v1.2.0 of MLOps.NET, the library will deploy the trained model as a replica set of one pod and expose the model to the world via an ingress load balancer. For simplicity’s sake it deploys the service and pod to a new namespace called `{experimentName-deploymentTargetName}`. This will allow models currently being tested and models in production to be separated, which allows for the possibility to apply different access and resource requirements as needed. Future releases of MLOps.NET will open up the possibility to configure various types of deployment settings, such as the type of load balancer, number of replicas and minimum amount of resources to be allocated.
 
