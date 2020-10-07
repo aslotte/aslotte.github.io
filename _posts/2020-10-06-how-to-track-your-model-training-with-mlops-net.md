@@ -8,31 +8,30 @@ date: 2020-10-06 16:20 -0400
 In this post I want to dive further into what experiments and runs are, and how we can use MLOps to track various aspects of the model training.
 
 
-
-\## What are an experiment and a run?
+## What are an experiment and a run?
 
 In the world of MLOps, experiments and runs are two fundamental concepts you'll see mentioned across all the tooling out there. You can view an experiment as the problem you are trying to solve with your model, while each run for an experiment represents each individual attempt to train a machine learning model to solve that specific problem. To give an example, we may want to train a model to detect fraudulent transactions. The attempt to train a model to solve this problem will be the experiment, while each attempt to train a model to solve it will be an individual run. As I am sure you can see, each run will have a number of characteristics associated with it, for example what data was used to train the model, what algorithm we picked, how we transformed the data and so forth. It is important to keep track of all of this information as it will more easily let you understand where a model came from and why it may make a certain prediction.
 
+The process of doing this is usually grouped into something called experiment tracking
 
+## Tracking training and test data
 
-\## Tracking training and test data
+- Schema
 
-\- Schema
+- Data hash
 
-\- Data hash
+- Columns, distributions
 
-\- Columns, distributions
+## Tracking model hyper-parameters
 
-\## Tracking model hyper-parameters
+- Hyper-parameters
 
-\- Hyper-parameters
+- Training time
 
-\- Training time
+## Tracking a model's evaluation metrics
 
-\## Tracking a model's evaluation metrics
+- Metrics
 
-\- Metrics
+- Confusion matrix
 
-\- Confusion matrix
-
-\## Wrapping up
+## Wrapping up
