@@ -12,15 +12,29 @@ In this post I want to dive further into what experiments and runs are, and how 
 
 In the world of MLOps, experiments and runs are two fundamental concepts you'll see mentioned across all the tooling out there. You can view an experiment as the problem you are trying to solve with your model, while each run for an experiment represents each individual attempt to train a machine learning model to solve that specific problem. To give an example, we may want to train a model to detect fraudulent transactions. The attempt to train a model to solve this problem will be the experiment, while each attempt to train a model to solve it will be an individual run. As I am sure you can see, each run will have a number of characteristics associated with it, for example what data was used to train the model, what algorithm we picked, how we transformed the data and so forth. It is important to keep track of all of this information as it will more easily let you understand where a model came from and why it may make a certain prediction.
 
-The process of doing this is usually grouped into something called experiment tracking
+The process of doing this is called experiment tracking. Let's take a look at what capabilities we currently have in MLOps.NET to do this.
+
+## Creating a Run
+Once you've configured and built your `MLOpsContext` (see my previous post) it's time to create an experiment and a run. The easiest way to do this is to create an experiment and a run in one go (if the experiment already exists it will just add a new run to it)
+
+```
+var run = await mlOpsContext.LifeCycle.CreateRunAsync(experimentName: "Titanic");
+```
 
 ## Tracking training and test data
+Training a model always start with the data. How the model performs will greatly depend on the data it has been trained on. 
 
-- Schema
+In the majority of cases you want to log data attributes such as what columns are present and their type, as well as a calculated hash to know if the data has changed in between training runs. In certain cases you may also want to calculate and log the specific distribution of a column which is particularly important for classification scenarios.
 
-- Data hash
+All operations to log data is present on the `DataCatalog`.
 
-- Columns, distributions
+```
+//This will log all columns and their type as well as calculating a hash for the dataset
+await mlOpsContext.Data.LogDataAsync(run.RunId, data);
+
+//This will log the data distribution of the Age column
+await mlOpsContext.Data.LogDataDistribution<int>(run.RunId, data, nameof(ModelInput.Age));
+```
 
 ## Tracking model hyper-parameters
 
