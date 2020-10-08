@@ -1,6 +1,7 @@
 ---
 title: Experiment Tracking with MLOps.NET
 comments: true
+image: /images/post-images/tracking.jpg
 tags:
   - mlops mlops.net experiments runs
 date: 2020-10-06 16:20 -0400
