@@ -5,7 +5,7 @@ tags:
   - mlops mlops.net experiments runs
 date: 2020-10-06 16:20 -0400
 ---
-In this post I want to dive further into what experiments and runs are, and how we can use MLOps to track various aspects of the model training.
+In this post I want to dive further into what experiments and runs are, and how we can use MLOps to track various aspects of the model training process.
 
 ![](/images/post-images/tracking.jpg)
 
