@@ -50,21 +50,23 @@ Looking into the storage provider of your choice, e.g. SQL Server, it could look
 ![](/images/post-images/hyperparameter.png)
 
 ## Tracking a model's evaluation metrics
+
 A model that doesn't perform well is a model not worth continuing with. Similarly, it's important to know if the model you're currently training is better than one that you have already deployed. As such, it's important to track evaluation metrics such as accuracy, F1 scores, recall, precision and so forth. Tracking metrics allows you to plot the performance of models based on hyper-parameters or changes in training data. 
 
-MLOps.NET allows you to directly pass an instance of a metric, e.g. a `CalibratedBinaryClassificationMetrics` and the library will automatically log all includes values.
+MLOps.NET allows you to directly pass an instance of a metric, e.g. a `CalibratedBinaryClassificationMetrics`, and MLOps.NET will automatically log all recorded values.
 
 ```
 //Log evaulation metrics
 await mlOpsContext.Evaluation.LogMetricsAsync(run.RunId, metrics);
 ```
 
+![](/images/post-images/metrics.png)
+
 It is also possible to log the result of an entire confusion matrix.
+
 ```
 //Log the result of a confusion matrix
 await mlOpsContext.Evaluation.LogConfusionMatrixAsync(run.RunId, metrics.ConfusionMatrix);
-
 ```
-
 
 ## Wrapping up
