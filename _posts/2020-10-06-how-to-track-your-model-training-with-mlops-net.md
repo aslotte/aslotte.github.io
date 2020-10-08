@@ -21,7 +21,7 @@ Once you've configured and built your `MLOpsContext` (see my previous post) it's
 var run = await mlOpsContext.LifeCycle.CreateRunAsync(experimentName: "Titanic");
 ```
 
-## Tracking training and test data
+## Logging Training and Test data
 Training a model always start with the data. How the model performs will greatly depend on the data it has been trained on. 
 
 In the majority of cases you want to log data attributes such as what columns are present and their type, as well as a calculated hash to know if the data has changed in between training runs. In certain cases you may also want to calculate and log the specific distribution of a column which is particularly important for classification scenarios.
@@ -36,11 +36,12 @@ await mlOpsContext.Data.LogDataAsync(run.RunId, data);
 await mlOpsContext.Data.LogDataDistribution<int>(run.RunId, data, nameof(ModelInput.Age));
 ```
 
-## Tracking model hyper-parameters
+## Logging Algorithm and Hyper-Parameters
+How did my binary decision tree do against that time I tried using support vector machines, or what did I actually use? Tracking what algorithm was used for which model, and to some extent what types of hyper-parameters the algorithm was fine-tuned with can be a lot. MLOps.NET makes this simple by integrating seamlessly with ML.NET. By passing the selected trainer to the library, MLOps.NET will automatically log all of this for you.
 
-- Hyper-parameters
-
-- Training time
+```
+await mlOpsContext.Training.LogHyperParametersAsync(run.RunId, trainer);
+```
 
 ## Tracking a model's evaluation metrics
 
