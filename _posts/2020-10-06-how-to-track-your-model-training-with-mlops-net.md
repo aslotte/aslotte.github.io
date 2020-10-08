@@ -72,4 +72,4 @@ If we again peek into the configured storage provider, it should look something 
 
 
 ## Wrapping up
-As MLOps.NET continues to mature, we'll see additional features introduced to support the experiment tracking process. Keeping a detailed audit trail on how your model came to be is becoming increasingly more important and as federal regulations catch up with the AI/ML industry this will become a necessity. 
+As MLOps.NET continues to mature, we'll see additional features introduced to support the experiment tracking process. Keeping a detailed audit trail for each model is becoming increasingly more important and as federal regulations catch up with the AI/ML industry this will become a real necessity. 
