@@ -7,6 +7,8 @@ date: 2020-10-06 16:20 -0400
 ---
 This is the second post in my MLOps.NET series, in which we explore MLOps as a discipline and MLOps.NET as the tool to support that process. In this post I want to explore experiments and runs.
 
+![](/images/post-images/tracking.jpg)
+
 ## What are experiments and runs?
 
 In the world of MLOps, experiments and runs are two fundamental concepts you'll see mentioned across all the tooling out there. You can view an experiment as the specific problem you are trying to solve with your model, while each run represents an attempt to train a machine learning model. To give an example, we may want to train a model to detect fraudulent transactions. The overarching goal solve this problem will be the experiment, while each attempt to train a model to solve it will be an individual run. As I am sure you can see, each run will have a number of characteristics associated with it, for example what data was used to train the model, what algorithm we picked, how we transformed the data and so forth. It is important to keep track of all of this information as it will more easily let you understand where a model originated from.  
@@ -70,6 +72,6 @@ If we again peek into the configured storage provider, it should look something 
 
 ![](/images/post-images/metrics.png)
 
-
 ## Wrapping up
-As MLOps.NET continues to mature, we'll see additional features introduced to support the experiment tracking process. Keeping a detailed audit trail for each model is becoming increasingly more important and as federal regulations catch up with the AI/ML industry this will become a real necessity. 
+
+As MLOps.NET continues to mature, we'll see additional features introduced to support the experiment tracking process. Keeping a detailed audit trail for each model is becoming increasingly more important and as federal regulations catch up with the AI/ML industry this will become a real necessity.
