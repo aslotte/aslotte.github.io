@@ -5,9 +5,7 @@ tags:
   - mlops mlops.net experiments runs
 date: 2020-10-06 16:20 -0400
 ---
-In this post I want to dive further into what experiments and runs are, and how we can use MLOps to track various aspects of the model training process.
-
-![](/images/post-images/tracking.jpg)
+In this post I want to dive further into what experiments and runs are, and how we can use MLOps to track various aspects of the model training.
 
 ## What is an experiment and a run?
 
@@ -67,4 +65,6 @@ await mlOpsContext.Evaluation.LogConfusionMatrixAsync(run.RunId, metrics.Confusi
 
 ![](/images/post-images/metrics.png)
 
+
 ## Wrapping up
+As MLOps.NET continues to mature, we'll see additional features introduced to support the experiment tracking process. Keeping a detailed audit trail on how your model came to be is becoming increasingly more important and as federal regulations catch up with the AI/ML industry this will become a necessity. 
