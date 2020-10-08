@@ -51,7 +51,17 @@ Looking into the storage provider of your choice, e.g. SQL Server, it could look
 
 ## Tracking a model's evaluation metrics
 
-* Metrics
-* Confusion matrix
+\`\``
+
+//Log evaulation metrics
+
+await mlOpsContext.Evaluation.LogMetricsAsync(run.RunId, metrics);
+
+//Log the result of a confusion matrix
+await mlOpsContext.Evaluation.LogConfusionMatrixAsync(run.RunId, metrics.ConfusionMatrix);
+
+\`\``
+
+
 
 ## Wrapping up
