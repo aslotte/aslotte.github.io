@@ -54,9 +54,9 @@ If we peek into the configured storage provider for the metadata, after we have 
 
 ## Tracking a Model's Evaluation Metrics
 
-A model that doesn't perform well is a model not worth continuing with. Similarly, it's important to know if the model you're currently training is better than one that you have already deployed. As such, it's important to track evaluation metrics such as accuracy, F1 scores, recall, precision and so forth. Tracking metrics allows you to plot the performance of models based on hyper-parameters or changes in training data. 
+A model that doesn't perform well is a model not worth continuing with. Similarly, it's important to know if the model you're currently training is better than one that you have already deployed to production. As such, it's important to track evaluation metrics such as accuracy, F1 scores, recall, precision and so forth. Tracking metrics allows you to plot the performance of a model vs changes in e.g. hyper-parameters or training data. 
 
-MLOps.NET allows you to directly pass an instance of a metric, e.g. a `CalibratedBinaryClassificationMetrics`, and MLOps.NET will log all recorded values.
+You can find the methods to log metrics in the `Evaluation` catalog.
 
 ```
 //Log evaulation metrics
@@ -65,6 +65,8 @@ await mlOpsContext.Evaluation.LogMetricsAsync(run.RunId, metrics);
 //Optionally log the result of a confusion matrix
 await mlOpsContext.Evaluation.LogConfusionMatrixAsync(run.RunId, metrics.ConfusionMatrix);
 ```
+
+If we again peek into the configured storage provider, it should look something like this:
 
 ![](/images/post-images/metrics.png)
 
