@@ -84,8 +84,7 @@ This will automatically increment the version of the model for a given experimen
 
 ## Wrapping up
 
-In this post we have explored the importance of a centralized versioned model repository where  can store the machine learning models we train. We have also taken a deep dive into the internals of MLOps.NET to understand how we can configure the library to use a repository of our choice.
-
+In this post we have explored the importance of a centralized model repository where we can store the machine learning models we train. We have also taken a deep dive into the internals of MLOps.NET to understand how we can configure the library to use a repository of our choice.
 
 
 Happy coding!
