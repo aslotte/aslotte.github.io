@@ -7,6 +7,8 @@ date: 2020-10-11 17:31 -0400
 ---
 What is a model repository in the context of MLOps, and why do we need one?
 
+![](/images/post-images/storage.jpg)
+
 ## Model repositories
 
 A model repository is source control for machine learning. Just as Git, or the source control system of your choice, is a vital piece of modern software development, a model repository is a centralized storage in which we can store and access **versioned models** machine learning models. 
