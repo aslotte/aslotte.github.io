@@ -1,6 +1,7 @@
 ---
 title: Exploring Model Repositories with MLOps.NET
 comments: true
+image: /images/post-images/storage.jpg
 tags:
   - modelrepository mlops
 date: 2020-10-11 17:31 -0400
