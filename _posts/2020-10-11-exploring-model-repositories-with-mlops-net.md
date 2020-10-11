@@ -74,6 +74,16 @@ To upload a model to a model repository, call the `UploadAsync` method on the `M
 await mlOpsContext.Model.UploadAsync(run.RunId, "{pathToTheModel}");
 ```
 
+This will upload the model to the model repository as a run artifact. At this point the model is just associated with a run, but it is not considered good enough for deployment (e.g. it has no version).
+
+To register a model call the `RegisterModel` method on the `Model` catalog. 
+
+```
+await mlOpsContext.Model.RegisterModel(run.ExperimentId, runArtifact.RunArtifactId, "John Doe");
+```
+
+This will increment the version of the model for a given experiment. For example, you may have a model currently deployed to production for experiment A with version 3. If you call the `RegisterModel` method your newly registered model will be assigned version 4 and given the ability to be deployed.
+
 ## Wrapping up
 
 In this post we have explored the importance of a centralized versioned model repository where  can store the machine learning models we train. We have also taken a deep dive into the internals of MLOps.NET to understand how we can configure the library to use a repository of our choice.
