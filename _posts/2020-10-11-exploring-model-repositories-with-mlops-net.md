@@ -18,6 +18,40 @@ You can implement a model repository in several ways. The most straightforward a
 The short answer is no. Data science is highly experimental and you will throughout your journey in finding a good model discover many bad ones. Each model you train as part of a run is commonly referred to a run artifact. By logging metadata about your previous runs, you can determine if a newly trained model is better than the one you currently have uploaded to a model repository, or that may be deployed to production use. If the model you just trained doesn't meet the expectations, then there is no need to store it with a new version in a model repository.
 
 ## Using a Model Repository in MLOps.NET
-MLOps.NET offers support for a version model repository and makes sure to manage everything for you from automatically incrementing the version number of registered models to keeping a link from a model to its related metadata. The library currently supports using either Azure Blob Storage, AWS S3 or a local file share as the backing storage provider for the model repository, depending on where you want to keep your models.
+[MLOps.NET](https://github.com/aslotte/MLOps.NET) offers support for a version model repository and makes sure to manage everything for you from automatically incrementing the version number of registered models to keeping a link from a model to its related metadata. The library currently supports using either Azure Blob Storage, AWS S3 or a local file share as the backing storage provider for the model repository, depending on where you want to keep your models.
 
 Let's take a look at how you can configure a model repository and how your models get organized.
+
+### Configuring a Model Repository
+You can configure what type of model repository to use when you build an `IMLOpsContext`
+
+### Azure Blob Storage
+To use Azure Blob Storage, call the `UseAzureBlobModelRepository` builder extension method, supplying the connection string to your blob storage.
+
+```
+  IMLOpsContext mlOpsContext = new MLOpsBuilder()
+    .UseSQLite()
+    .UseAzureBlobModelRepository("connectionString")
+    .Build();
+```
+
+### AWS S3 
+To use AWS S3, call the `UseAWSS3ModelRepository` builder extension method and supply the AWS access key, secret access key and the region name.
+
+```
+  IMLOpsContext mlOpsContext = new MLOpsBuilder()
+    .UseSQLite()
+    .UseAWSS3ModelRepository("awsAccessKey", "awsSecretAccessKey", "regionName")
+    .Build();
+```
+
+### Local file share
+Finally, to use a local file share, call the `UseLocalFileModelRepository` builder extension method. You can optionally provide a path to a root folder. If no path is supplied, models will be stored under `C:\Users\{user}\.mlops`
+
+```
+  IMLOpsContext mlOpsContext = new MLOpsBuilder()
+    .UseSQLite()
+    .UseLocalFileModelRepository()
+    .Build();
+```
+
